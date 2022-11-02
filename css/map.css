@@ -1,0 +1,37 @@
+#myearth {
+	width: 100%;
+	overflow: hidden;
+	opacity: 0;
+	transition: opacity 1.5s ease-in;
+}
+#myearth.earth-ready {
+    height: 170px;
+    opacity: 1;
+    position: absolute;
+    top: 0px;
+}
+#myearth::before {
+	content: none;
+}
+#glow {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 170px;
+	height: 170px;
+	transform: translate(-50%, -50%);
+	background: radial-gradient(ellipse at center, rgba(255,255,255,0.5) 25%,rgba(255,255,255,0.5) 53%,rgba(255,255,255,0.05) 56%,rgba(255,255,255,0) 70%);
+	z-index: 200;
+	pointer-events: none;
+}
+
+/*RESPONSIVE*/
+@media(max-width: 1440px){
+	#myearth.earth-ready {
+		height: 100px;
+	}
+	#glow {
+		width: 100px;
+		height: 100px;
+	}
+}
