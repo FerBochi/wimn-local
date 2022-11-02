@@ -1,0 +1,1812 @@
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width">
+
+		<meta name="description" content="Global Mapping of Organizations Working on Gender and Migration"/>
+		<meta name="keywords" content="women’s rights, labor rights, climate justice, development, democratization" />
+		<meta name="author" content="No Borders To Equality" />
+		<meta name="robots" content="index" />
+		<meta http-equiv="cache-control" content="no-cache" />
+
+		<meta property="og:url" content=""/>
+		<meta property="og:type" content="website" />
+		<meta property="og:title" content="No Borders To Equality"/>
+		<meta property="og:description" content="Global Mapping of Organizations Working on Gender and Migration"/>
+		<meta property="og:image" content="img/ogp.jpg"/>
+		<meta property="og:image:alt" content="No Borders To Equality"/>
+		<meta property="fb:page_id" content="#" />
+
+		<link rel="apple-touch-icon" sizes="57x57" href="img/icons/apple-touch-icon-57x57.png">
+		<link rel="apple-touch-icon" sizes="60x60" href="img/icons/apple-touch-icon-60x60.png">
+		<link rel="apple-touch-icon" sizes="72x72" href="img/icons/apple-touch-icon-72x72.png">
+		<link rel="apple-touch-icon" sizes="76x76" href="img/icons/apple-touch-icon-76x76.png">
+		<link rel="apple-touch-icon" sizes="114x114" href="img/icons/apple-touch-icon-114x114.png">
+		<link rel="apple-touch-icon" sizes="120x120" href="img/icons/apple-touch-icon-120x120.png">
+		<link rel="apple-touch-icon" sizes="144x144" href="img/icons/apple-touch-icon-144x144.png">
+		<link rel="apple-touch-icon" sizes="152x152" href="img/icons/apple-touch-icon-152x152.png">
+		<link rel="apple-touch-icon" sizes="180x180" href="img/icons/apple-touch-icon-180x180.png">
+		<link rel="icon" type="image/png" href="img/icons/favicon-32x32.png" sizes="32x32">
+		<link rel="icon" type="image/png" href="img/icons/favicon-194x194.png" sizes="194x194">
+		<link rel="icon" type="image/png" href="img/icons/favicon-96x96.png" sizes="96x96">
+		<link rel="icon" type="image/png" href="img/icons/android-chrome-192x192.png" sizes="192x192">
+		<link rel="icon" type="image/png" href="img/icons/favicon-16x16.png" sizes="16x16">
+
+		<link rel="preconnect" href="https://fonts.gstatic.com">
+		<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;700;900&display=swap" rel="stylesheet">
+		<link rel="stylesheet" href="css/styles.css?ver=1.2">
+		<link rel="stylesheet" href="css/map.css">
+		<title>No Borders To Equality | Interactive Data Visualization</title>
+	</head>
+	<body id="interactiveData" class="">
+
+		<header id="header">
+			<nav>
+				<div class="wimn-logo">
+					<a href="index.html">
+						<h1><span>NO BORDERS</span><br>TO EQUALITY</h1>
+						<div id="myearth">
+							<div id="glow"></div>
+						</div>
+					</a>
+				</div>
+				<div id="btnMenu" class="hamburger hamburger--spin onlyMob" onclick="buttonMenu()">
+					<div class="hamburger-box">
+						<div class="hamburger-inner"></div>
+					</div>
+				</div>
+				<div id="main-nav" class="wimn-menu navbar flexMob">
+					<a class="link" href="index.html">Home</a>
+					<div class="subnav link">
+						<a class="subnavbtn">About</a>
+						<div class="subnav-content">
+							<a class="sub-link" href="mapping-project.html">Mapping Project</a>
+							<a class="sub-link" href="project-partners.html">Project Partners</a>
+							<a class="sub-link" href="links.html">Links</a>
+						</div>
+					</div>
+					<a class="link active" href="interactive-data.html">Interactive Data Visualization</a>
+					<a class="link" href="report.html">Report</a>
+				</div>
+			</nav>
+		</header>
+
+		
+		<!-- graphics survey -->
+		<section class="hcont interactiveData mt-postHeader">
+			<div id="filterData" class="side-data">
+				<span id="btnExpand" onclick="btnExpandFilter()">
+					<a>EXPAND</a>
+					<a>BACK</a>
+				</span>
+				<div class="tab flex">
+					<button id="defaultOpen" class="tablinks" onclick="openTab(event, 'Global')">Global</button>
+					<button class="tablinks" onclick="openTab(event, 'Regional')">Regional</button>
+					<button class="tablinks" onclick="openTab(event, 'Sub-Regional')">Sub-Regional</button>
+				</div>
+				
+				<div id="Global" class="tabcontent">
+					<button class="accordion">Organizational profile</button>
+					<div class="panel">
+						<div class="tab-survey">
+							<button class="tablinksurvey" onclick="openSurvey(event, 'G1')">Sector</button>
+							<button class="tablinksurvey" onclick="openSurvey(event, 'G2')">Territorial Scope</button>
+							<!-- <button class="tablinksurvey" onclick="openSurvey(event, 'G3')">Regional location</button> -->
+							<button class="tablinksurvey" onclick="openSurvey(event, 'G4')">Strategic Focus</button>
+							<button class="tablinksurvey" onclick="openSurvey(event, 'G5')">Types of Service Provision</button>
+						</div>
+					</div>
+	
+					<button class="accordion">Women in migration</button>
+					<div class="panel">
+						<div class="tab-survey">
+							<button class="tablinksurvey" onclick="openSurvey(event, 'G6')">Place in the Migration Cycle</button>
+							<button class="tablinksurvey" onclick="openSurvey(event, 'G7')">Migration Status</button>
+							<button class="tablinksurvey" onclick="openSurvey(event, 'G8')">Survivors of Violence</button>
+							<button class="tablinksurvey" onclick="openSurvey(event, 'G9')">Workers According to Sector</button>
+						</div>
+					</div>
+	
+					<button class="accordion">Priorities of women in migration</button>
+					<div class="panel">
+						<div class="tab-survey">
+							<button class="tablinksurvey" onclick="openSurvey(event, 'G10')">Short Term Priorities</button>
+							<button class="tablinksurvey" onclick="openSurvey(event, 'G11')">Long Term Priorities</button>
+						</div>
+					</div>
+	
+					<div class="tab-survey single">
+						<button class="tablinksurvey" onclick="openSurvey(event, 'G12')">Impact of COVID 19 in the Lives of Migrant Women</button>
+					</div>
+				</div>
+				
+				<div id="Regional" class="tabcontent">
+					<div class="title-header">
+						Select a region
+					</div>
+					<div class="tab-section">
+						<button class="tablinksection" onclick="openSection(event, 'Section-Africa')">Africa/Middle East</button>
+						<button class="tablinksection" onclick="openSection(event, 'Section-Americas')">Americas</button>
+						<button class="tablinksection" onclick="openSection(event, 'Section-Asia')">Asia/Pacific</button>
+						<button class="tablinksection" onclick="openSection(event, 'Section-Europe')">Europe</button>
+					</div>
+	
+					<!-- section Asia -->
+					<div id="Section-Asia" class="tabcontentsection">
+						<div class="title-header">
+							<span onclick="goBack('Section-Asia')">
+								<i class="flaticon-left-arrow"></i> Asia
+							</span>
+						</div>
+						
+						<button class="accordion">Organizational profile</button>
+						<div class="panel">
+							<div class="tab-survey">
+								<button class="tablinksurvey" onclick="openSurvey(event, 'G13')">Sector</button>
+								<button class="tablinksurvey" onclick="openSurvey(event, 'G14')">Territorial Scope</button>
+								<!-- <button class="tablinksurvey" onclick="openSurvey(event, 'G15')">Regional location</button> -->
+								<button class="tablinksurvey" onclick="openSurvey(event, 'G16')">Strategic Focus</button>
+								<button class="tablinksurvey" onclick="openSurvey(event, 'G17')">Types of Service Provision</button>
+							</div>
+						</div>
+	
+						<button class="accordion">Women in migration</button>
+						<div class="panel">
+							<div class="tab-survey">
+								<button class="tablinksurvey" onclick="openSurvey(event, 'G18')">Place in the Migration Cycle</button>
+								<button class="tablinksurvey" onclick="openSurvey(event, 'G19')">Migration Status</button>
+								<button class="tablinksurvey" onclick="openSurvey(event, 'G20')">Survivors of Violence</button>
+								<button class="tablinksurvey" onclick="openSurvey(event, 'G21')">Workers According to Sector</button>
+							</div>
+						</div>
+	
+						<button class="accordion">Priorities of women in migration</button>
+						<div class="panel">
+							<div class="tab-survey">
+								<button class="tablinksurvey" onclick="openSurvey(event, 'G22')">Short Term Priorities</button>
+								<button class="tablinksurvey" onclick="openSurvey(event, 'G23')">Long Term Priorities</button>
+							</div>
+						</div>
+	
+						<div class="tab-survey single">
+							<button class="tablinksurvey" onclick="openSurvey(event, 'G24')">Impact of COVID 19 in the Lives of Migrant Women</button>
+						</div>
+					</div>
+	
+					<!-- section Africa -->
+					<div id="Section-Africa" class="tabcontentsection">
+						<div class="title-header">
+							<span onclick="goBack('Section-Africa')">
+								<i class="flaticon-left-arrow"></i> Africa/Middle East
+							</span>
+						</div>
+						
+						<button class="accordion">Organizational profile</button>
+						<div class="panel">
+							<div class="tab-survey">
+								<button class="tablinksurvey" onclick="openSurvey(event, 'G25')">Sector</button>
+								<button class="tablinksurvey" onclick="openSurvey(event, 'G26')">Territorial Scope</button>
+								<!-- <button class="tablinksurvey" onclick="openSurvey(event, 'G27')">Regional location</button> -->
+								<button class="tablinksurvey" onclick="openSurvey(event, 'G28')">Strategic Focus</button>
+								<button class="tablinksurvey" onclick="openSurvey(event, 'G29')">Types of Service Provision</button>
+							</div>
+						</div>
+	
+						<button class="accordion">Women in migration</button>
+						<div class="panel">
+							<div class="tab-survey">
+								<button class="tablinksurvey" onclick="openSurvey(event, 'G30')">Place in the Migration Cycle</button>
+								<button class="tablinksurvey" onclick="openSurvey(event, 'G31')">Migration Status</button>
+								<button class="tablinksurvey" onclick="openSurvey(event, 'G32')">Survivors of Violence</button>
+								<button class="tablinksurvey" onclick="openSurvey(event, 'G33')">Workers According to Sector</button>
+							</div>
+						</div>
+	
+						<button class="accordion">Priorities of women in migration</button>
+						<div class="panel">
+							<div class="tab-survey">
+								<button class="tablinksurvey" onclick="openSurvey(event, 'G34')">Short Term Priorities</button>
+								<button class="tablinksurvey" onclick="openSurvey(event, 'G35')">Long Term Priorities</button>
+							</div>
+						</div>
+	
+						<div class="tab-survey single">
+							<button class="tablinksurvey" onclick="openSurvey(event, 'G36')">Impact of COVID 19 in the Lives of Migrant Women</button>
+						</div>
+					</div>
+	
+					<!-- section Americas -->
+					<div id="Section-Americas" class="tabcontentsection">
+						<div class="title-header">
+							<span onclick="goBack('Section-Americas')">
+								<i class="flaticon-left-arrow"></i> Americas
+							</span>
+						</div>
+						
+						<button class="accordion">Organizational profile</button>
+						<div class="panel">
+							<div class="tab-survey">
+								<button class="tablinksurvey" onclick="openSurvey(event, 'G37')">Sector</button>
+								<button class="tablinksurvey" onclick="openSurvey(event, 'G38')">Territorial Scope</button>
+								<!-- <button class="tablinksurvey" onclick="openSurvey(event, 'G39')">Regional location</button> -->
+								<button class="tablinksurvey" onclick="openSurvey(event, 'G40')">Strategic Focus</button>
+								<button class="tablinksurvey" onclick="openSurvey(event, 'G41')">Types of Service Provision</button>
+							</div>
+						</div>
+	
+						<button class="accordion">Women in migration</button>
+						<div class="panel">
+							<div class="tab-survey">
+								<button class="tablinksurvey" onclick="openSurvey(event, 'G42')">Place in the Migration Cycle</button>
+								<button class="tablinksurvey" onclick="openSurvey(event, 'G43')">Migration Status</button>
+								<button class="tablinksurvey" onclick="openSurvey(event, 'G44')">Survivors of Violence</button>
+								<button class="tablinksurvey" onclick="openSurvey(event, 'G45')">Workers According to Sector</button>
+							</div>
+						</div>
+	
+						<button class="accordion">Priorities of women in migration</button>
+						<div class="panel">
+							<div class="tab-survey">
+								<button class="tablinksurvey" onclick="openSurvey(event, 'G46')">Short Term Priorities</button>
+								<button class="tablinksurvey" onclick="openSurvey(event, 'G47')">Long Term Priorities</button>
+							</div>
+						</div>
+	
+						<div class="tab-survey single">
+							<button class="tablinksurvey" onclick="openSurvey(event, 'G48')">Impact of COVID 19 in the Lives of Migrant Women</button>
+						</div>
+					</div>
+	
+					<!-- section Americas -->
+					<div id="Section-Europe" class="tabcontentsection">
+						<div class="title-header">
+							<span onclick="goBack('Section-Europe')">
+								<i class="flaticon-left-arrow"></i> Europe
+							</span>
+						</div>
+						
+						<button class="accordion">Organizational profile</button>
+						<div class="panel">
+							<div class="tab-survey">
+								<button class="tablinksurvey" onclick="openSurvey(event, 'G49')">Sector</button>
+								<button class="tablinksurvey" onclick="openSurvey(event, 'G50')">Territorial Scope</button>
+								<!-- <button class="tablinksurvey" onclick="openSurvey(event, 'G51')">Regional location</button> -->
+								<button class="tablinksurvey" onclick="openSurvey(event, 'G52')">Strategic Focus</button>
+								<button class="tablinksurvey" onclick="openSurvey(event, 'G53')">Types of Service Provision</button>
+							</div>
+						</div>
+	
+						<button class="accordion">Women in migration</button>
+						<div class="panel">
+							<div class="tab-survey">
+								<button class="tablinksurvey" onclick="openSurvey(event, 'G54')">Place in the Migration Cycle</button>
+								<button class="tablinksurvey" onclick="openSurvey(event, 'G55')">Migration Status</button>
+								<button class="tablinksurvey" onclick="openSurvey(event, 'G56')">Survivors of Violence</button>
+								<button class="tablinksurvey" onclick="openSurvey(event, 'G57')">Workers According to Sector</button>
+							</div>
+						</div>
+	
+						<button class="accordion">Priorities of women in migration</button>
+						<div class="panel">
+							<div class="tab-survey">
+								<button class="tablinksurvey" onclick="openSurvey(event, 'G58')">Short Term Priorities</button>
+								<button class="tablinksurvey" onclick="openSurvey(event, 'G59')">Long Term Priorities</button>
+							</div>
+						</div>
+	
+						<div class="tab-survey single">
+							<button class="tablinksurvey" onclick="openSurvey(event, 'G60')">Impact of COVID 19 in the Lives of Migrant Women</button>
+						</div>
+					</div>
+	
+				</div>
+				
+				<div id="Sub-Regional" class="tabcontent">
+					<div class="title-header">
+						Asia
+					</div>
+					<div class="tab-section">
+						<button class="tablinksection" onclick="openSection(event, 'Section-EastSouthEastAsia')">East and Southeast Asia</button>
+						<button class="tablinksection" onclick="openSection(event, 'Section-Pacific')">Pacific</button>
+						<button class="tablinksection" onclick="openSection(event, 'Section-SouthAsia')">South Asia</button>
+					</div>
+	
+					<div class="title-header">
+						Africa/Middle East
+					</div>
+					<div class="tab-section">
+						<button class="tablinksection" onclick="openSection(event, 'Section-MiddleEast')">Middle East and North Africa</button>
+						<button class="tablinksection" onclick="openSection(event, 'Section-Sub-SaharanAfrica')">Sub-Saharan</button>
+					</div>
+	
+					<div class="title-header">
+						Americas
+					</div>
+					<div class="tab-section">
+						<button class="tablinksection" onclick="openSection(event, 'Section-TheCaribbean')">Caribbean</button>
+						<button class="tablinksection" onclick="openSection(event, 'Section-CentralNorthAmerica')">Central and North America</button>
+						<button class="tablinksection" onclick="openSection(event, 'Section-SouthAmerica')">South America</button>
+					</div>
+	
+					<!-- section EastSouthEastAsia -->
+					<div id="Section-EastSouthEastAsia" class="tabcontentsection">
+						<div class="title-header">
+							<span onclick="goBack('Section-EastSouthEastAsia')">
+								<i class="flaticon-left-arrow"></i> East and Southeast Asia
+							</span>
+						</div>
+						
+						<button class="accordion">Organizational profile</button>
+						<div class="panel">
+							<div class="tab-survey">
+								<button class="tablinksurvey" onclick="openSurvey(event, 'G61')">Sector</button>
+								<button class="tablinksurvey" onclick="openSurvey(event, 'G62')">Territorial Scope</button>
+								<!-- <button class="tablinksurvey" onclick="openSurvey(event, 'G63')">Regional location</button> -->
+								<button class="tablinksurvey" onclick="openSurvey(event, 'G64')">Strategic Focus</button>
+								<button class="tablinksurvey" onclick="openSurvey(event, 'G65')">Types of Service Provision</button>
+							</div>
+						</div>
+	
+						<button class="accordion">Women in migration</button>
+						<div class="panel">
+							<div class="tab-survey">
+								<button class="tablinksurvey" onclick="openSurvey(event, 'G66')">Place in the Migration Cycle</button>
+								<button class="tablinksurvey" onclick="openSurvey(event, 'G67')">Migration Status</button>
+								<button class="tablinksurvey" onclick="openSurvey(event, 'G68')">Survivors of Violence</button>
+								<button class="tablinksurvey" onclick="openSurvey(event, 'G69')">Workers According to Sector</button>
+							</div>
+						</div>
+	
+						<button class="accordion">Priorities of women in migration</button>
+						<div class="panel">
+							<div class="tab-survey">
+								<button class="tablinksurvey" onclick="openSurvey(event, 'G70')">Short Term Priorities</button>
+								<button class="tablinksurvey" onclick="openSurvey(event, 'G71')">Long Term Priorities</button>
+							</div>
+						</div>
+	
+						<div class="tab-survey single">
+							<button class="tablinksurvey" onclick="openSurvey(event, 'G72')">Impact of COVID 19 in the Lives of Migrant Women</button>
+						</div>
+					</div>
+	
+					<!-- section SouthAsia -->
+					<div id="Section-SouthAsia" class="tabcontentsection">
+						<div class="title-header">
+							<span onclick="goBack('Section-SouthAsia')">
+								<i class="flaticon-left-arrow"></i> South Asia
+							</span>
+						</div>
+						
+						<button class="accordion">Organizational profile</button>
+						<div class="panel">
+							<div class="tab-survey">
+								<button class="tablinksurvey" onclick="openSurvey(event, 'G73')">Sector</button>
+								<button class="tablinksurvey" onclick="openSurvey(event, 'G74')">Territorial Scope</button>
+								<!-- <button class="tablinksurvey" onclick="openSurvey(event, 'G75')">Regional location</button> -->
+								<button class="tablinksurvey" onclick="openSurvey(event, 'G76')">Strategic Focus</button>
+								<button class="tablinksurvey" onclick="openSurvey(event, 'G77')">Types of Service Provision</button>
+							</div>
+						</div>
+	
+						<button class="accordion">Women in migration</button>
+						<div class="panel">
+							<div class="tab-survey">
+								<button class="tablinksurvey" onclick="openSurvey(event, 'G78')">Place in the Migration Cycle</button>
+								<button class="tablinksurvey" onclick="openSurvey(event, 'G79')">Migration Status</button>
+								<button class="tablinksurvey" onclick="openSurvey(event, 'G80')">Survivors of Violence</button>
+								<button class="tablinksurvey" onclick="openSurvey(event, 'G81')">Workers According to Sector</button>
+							</div>
+						</div>
+	
+						<button class="accordion">Priorities of women in migration</button>
+						<div class="panel">
+							<div class="tab-survey">
+								<button class="tablinksurvey" onclick="openSurvey(event, 'G82')">Short Term Priorities</button>
+								<button class="tablinksurvey" onclick="openSurvey(event, 'G83')">Long Term Priorities</button>
+							</div>
+						</div>
+	
+						<div class="tab-survey single">
+							<button class="tablinksurvey" onclick="openSurvey(event, 'G84')">Impact of COVID 19 in the Lives of Migrant Women</button>
+						</div>
+					</div>
+	
+					<!-- section Pacific -->
+					<div id="Section-Pacific" class="tabcontentsection">
+						<div class="title-header">
+							<span onclick="goBack('Section-Pacific')">
+								<i class="flaticon-left-arrow"></i> Pacific
+							</span>
+						</div>
+						
+						<button class="accordion">Organizational profile</button>
+						<div class="panel">
+							<div class="tab-survey">
+								<button class="tablinksurvey" onclick="openSurvey(event, 'G85')">Sector</button>
+								<button class="tablinksurvey" onclick="openSurvey(event, 'G86')">Territorial Scope</button>
+								<!-- <button class="tablinksurvey" onclick="openSurvey(event, 'G87')">Regional location</button> -->
+								<button class="tablinksurvey" onclick="openSurvey(event, 'G88')">Strategic Focus</button>
+								<button class="tablinksurvey" onclick="openSurvey(event, 'G89')">Types of Service Provision</button>
+							</div>
+						</div>
+	
+						<button class="accordion">Women in migration</button>
+						<div class="panel">
+							<div class="tab-survey">
+								<button class="tablinksurvey" onclick="openSurvey(event, 'G90')">Place in the Migration Cycle</button>
+								<button class="tablinksurvey" onclick="openSurvey(event, 'G91')">Migration Status</button>
+								<button class="tablinksurvey" onclick="openSurvey(event, 'G92')">Survivors of Violence</button>
+								<button class="tablinksurvey" onclick="openSurvey(event, 'G93')">Workers According to Sector</button>
+							</div>
+						</div>
+	
+						<button class="accordion">Priorities of women in migration</button>
+						<div class="panel">
+							<div class="tab-survey">
+								<button class="tablinksurvey" onclick="openSurvey(event, 'G94')">Short Term Priorities</button>
+								<button class="tablinksurvey" onclick="openSurvey(event, 'G95')">Long Term Priorities</button>
+							</div>
+						</div>
+	
+						<div class="tab-survey single">
+							<button class="tablinksurvey" onclick="openSurvey(event, 'G96')">Impact of COVID 19 in the Lives of Migrant Women</button>
+						</div>
+					</div>
+	
+					<!-- section Sub-SaharanAfrica -->
+					<div id="Section-Sub-SaharanAfrica" class="tabcontentsection">
+						<div class="title-header">
+							<span onclick="goBack('Section-Sub-SaharanAfrica')">
+								<i class="flaticon-left-arrow"></i> Sub-Saharan
+							</span>
+						</div>
+						
+						<button class="accordion">Organizational profile</button>
+						<div class="panel">
+							<div class="tab-survey">
+								<button class="tablinksurvey" onclick="openSurvey(event, 'G97')">Sector</button>
+								<button class="tablinksurvey" onclick="openSurvey(event, 'G98')">Territorial Scope</button>
+								<!-- <button class="tablinksurvey" onclick="openSurvey(event, 'G99')">Regional location</button> -->
+								<button class="tablinksurvey" onclick="openSurvey(event, 'G100')">Strategic Focus</button>
+								<button class="tablinksurvey" onclick="openSurvey(event, 'G101')">Types of Service Provision</button>
+							</div>
+						</div>
+	
+						<button class="accordion">Women in migration</button>
+						<div class="panel">
+							<div class="tab-survey">
+								<button class="tablinksurvey" onclick="openSurvey(event, 'G102')">Place in the Migration Cycle</button>
+								<button class="tablinksurvey" onclick="openSurvey(event, 'G103')">Migration Status</button>
+								<button class="tablinksurvey" onclick="openSurvey(event, 'G104')">Survivors of Violence</button>
+								<button class="tablinksurvey" onclick="openSurvey(event, 'G105')">Workers According to Sector</button>
+							</div>
+						</div>
+	
+						<button class="accordion">Priorities of women in migration</button>
+						<div class="panel">
+							<div class="tab-survey">
+								<button class="tablinksurvey" onclick="openSurvey(event, 'G106')">Short Term Priorities</button>
+								<button class="tablinksurvey" onclick="openSurvey(event, 'G107')">Long Term Priorities</button>
+							</div>
+						</div>
+	
+						<div class="tab-survey single">
+							<button class="tablinksurvey" onclick="openSurvey(event, 'G108')">Impact of COVID 19 in the Lives of Migrant Women</button>
+						</div>
+					</div>
+	
+					<!-- section MiddleEast -->
+					<div id="Section-MiddleEast" class="tabcontentsection">
+						<div class="title-header">
+							<span onclick="goBack('Section-MiddleEast')">
+								<i class="flaticon-left-arrow"></i> Middle East
+							</span>
+						</div>
+						
+						<button class="accordion">Organizational profile</button>
+						<div class="panel">
+							<div class="tab-survey">
+								<button class="tablinksurvey" onclick="openSurvey(event, 'G109')">Sector</button>
+								<button class="tablinksurvey" onclick="openSurvey(event, 'G110')">Territorial Scope</button>
+								<!-- <button class="tablinksurvey" onclick="openSurvey(event, 'G111')">Regional location</button> -->
+								<button class="tablinksurvey" onclick="openSurvey(event, 'G112')">Strategic Focus</button>
+								<button class="tablinksurvey" onclick="openSurvey(event, 'G113')">Types of Service Provision</button>
+							</div>
+						</div>
+	
+						<button class="accordion">Women in migration</button>
+						<div class="panel">
+							<div class="tab-survey">
+								<button class="tablinksurvey" onclick="openSurvey(event, 'G114')">Place in the Migration Cycle</button>
+								<button class="tablinksurvey" onclick="openSurvey(event, 'G115')">Migration Status</button>
+								<button class="tablinksurvey" onclick="openSurvey(event, 'G116')">Survivors of Violence</button>
+								<button class="tablinksurvey" onclick="openSurvey(event, 'G117')">Workers According to Sector</button>
+							</div>
+						</div>
+	
+						<button class="accordion">Priorities of women in migration</button>
+						<div class="panel">
+							<div class="tab-survey">
+								<button class="tablinksurvey" onclick="openSurvey(event, 'G118')">Short Term Priorities</button>
+								<button class="tablinksurvey" onclick="openSurvey(event, 'G119')">Long Term Priorities</button>
+							</div>
+						</div>
+	
+						<div class="tab-survey single">
+							<button class="tablinksurvey" onclick="openSurvey(event, 'G120')">Impact of COVID 19 in the Lives of Migrant Women</button>
+						</div>
+					</div>
+	
+					<!-- section MiddleEast -->
+					<div id="Section-MiddleEast" class="tabcontentsection">
+						<div class="title-header">
+							<span onclick="goBack('Section-MiddleEast')">
+								<i class="flaticon-left-arrow"></i> Middle East
+							</span>
+						</div>
+						
+						<button class="accordion">Organizational profile</button>
+						<div class="panel">
+							<div class="tab-survey">
+								<button class="tablinksurvey" onclick="openSurvey(event, 'G109')">Sector</button>
+								<button class="tablinksurvey" onclick="openSurvey(event, 'G110')">Territorial Scope</button>
+								<!-- <button class="tablinksurvey" onclick="openSurvey(event, 'G111')">Regional location</button> -->
+								<button class="tablinksurvey" onclick="openSurvey(event, 'G112')">Strategic Focus</button>
+								<button class="tablinksurvey" onclick="openSurvey(event, 'G113')">Types of Service Provision</button>
+							</div>
+						</div>
+	
+						<button class="accordion">Women in migration</button>
+						<div class="panel">
+							<div class="tab-survey">
+								<button class="tablinksurvey" onclick="openSurvey(event, 'G114')">Place in the Migration Cycle</button>
+								<button class="tablinksurvey" onclick="openSurvey(event, 'G115')">Migration Status</button>
+								<button class="tablinksurvey" onclick="openSurvey(event, 'G116')">Survivors of Violence</button>
+								<button class="tablinksurvey" onclick="openSurvey(event, 'G117')">Workers According to Sector</button>
+							</div>
+						</div>
+	
+						<button class="accordion">Priorities of women in migration</button>
+						<div class="panel">
+							<div class="tab-survey">
+								<button class="tablinksurvey" onclick="openSurvey(event, 'G118')">Short Term Priorities</button>
+								<button class="tablinksurvey" onclick="openSurvey(event, 'G119')">Long Term Priorities</button>
+							</div>
+						</div>
+	
+						<div class="tab-survey single">
+							<button class="tablinksurvey" onclick="openSurvey(event, 'G120')">Impact of COVID 19 in the Lives of Migrant Women</button>
+						</div>
+					</div>
+	
+					<!-- section SouthAmerica -->
+					<div id="Section-SouthAmerica" class="tabcontentsection">
+						<div class="title-header">
+							<span onclick="goBack('Section-SouthAmerica')">
+								<i class="flaticon-left-arrow"></i> South America
+							</span>
+						</div>
+						
+						<button class="accordion">Organizational profile</button>
+						<div class="panel">
+							<div class="tab-survey">
+								<button class="tablinksurvey" onclick="openSurvey(event, 'G121')">Sector</button>
+								<button class="tablinksurvey" onclick="openSurvey(event, 'G122')">Territorial Scope</button>
+								<!-- <button class="tablinksurvey" onclick="openSurvey(event, 'G123')">Regional location</button> -->
+								<button class="tablinksurvey" onclick="openSurvey(event, 'G124')">Strategic Focus</button>
+								<button class="tablinksurvey" onclick="openSurvey(event, 'G125')">Types of Service Provision</button>
+							</div>
+						</div>
+	
+						<button class="accordion">Women in migration</button>
+						<div class="panel">
+							<div class="tab-survey">
+								<button class="tablinksurvey" onclick="openSurvey(event, 'G126')">Place in the Migration Cycle</button>
+								<button class="tablinksurvey" onclick="openSurvey(event, 'G127')">Migration Status</button>
+								<button class="tablinksurvey" onclick="openSurvey(event, 'G128')">Survivors of Violence</button>
+								<button class="tablinksurvey" onclick="openSurvey(event, 'G129')">Workers According to Sector</button>
+							</div>
+						</div>
+	
+						<button class="accordion">Priorities of women in migration</button>
+						<div class="panel">
+							<div class="tab-survey">
+								<button class="tablinksurvey" onclick="openSurvey(event, 'G130')">Short Term Priorities</button>
+								<button class="tablinksurvey" onclick="openSurvey(event, 'G131')">Long Term Priorities</button>
+							</div>
+						</div>
+	
+						<div class="tab-survey single">
+							<button class="tablinksurvey" onclick="openSurvey(event, 'G132')">Impact of COVID 19 in the Lives of Migrant Women</button>
+						</div>
+					</div>
+	
+					<!-- section CentralNorthAmerica -->
+					<div id="Section-CentralNorthAmerica" class="tabcontentsection">
+						<div class="title-header">
+							<span onclick="goBack('Section-CentralNorthAmerica')">
+								<i class="flaticon-left-arrow"></i> Central and North America
+							</span>
+						</div>
+						
+						<button class="accordion">Organizational profile</button>
+						<div class="panel">
+							<div class="tab-survey">
+								<button class="tablinksurvey" onclick="openSurvey(event, 'G133')">Sector</button>
+								<button class="tablinksurvey" onclick="openSurvey(event, 'G134')">Territorial Scope</button>
+								<!-- <button class="tablinksurvey" onclick="openSurvey(event, 'G135')">Regional location</button> -->
+								<button class="tablinksurvey" onclick="openSurvey(event, 'G136')">Strategic Focus</button>
+								<button class="tablinksurvey" onclick="openSurvey(event, 'G137')">Types of Service Provision</button>
+							</div>
+						</div>
+	
+						<button class="accordion">Women in migration</button>
+						<div class="panel">
+							<div class="tab-survey">
+								<button class="tablinksurvey" onclick="openSurvey(event, 'G138')">Place in the Migration Cycle</button>
+								<button class="tablinksurvey" onclick="openSurvey(event, 'G139')">Migration Status</button>
+								<button class="tablinksurvey" onclick="openSurvey(event, 'G140')">Survivors of Violence</button>
+								<button class="tablinksurvey" onclick="openSurvey(event, 'G141')">Workers According to Sector</button>
+							</div>
+						</div>
+	
+						<button class="accordion">Priorities of women in migration</button>
+						<div class="panel">
+							<div class="tab-survey">
+								<button class="tablinksurvey" onclick="openSurvey(event, 'G142')">Short Term Priorities</button>
+								<button class="tablinksurvey" onclick="openSurvey(event, 'G143')">Long Term Priorities</button>
+							</div>
+						</div>
+	
+						<div class="tab-survey single">
+							<button class="tablinksurvey" onclick="openSurvey(event, 'G144')">Impact of COVID 19 in the Lives of Migrant Women</button>
+						</div>
+					</div>
+	
+					<!-- section TheCaribbean -->
+					<div id="Section-TheCaribbean" class="tabcontentsection">
+						<div class="title-header">
+							<span onclick="goBack('Section-TheCaribbean')">
+								<i class="flaticon-left-arrow"></i> Caribbean
+							</span>
+						</div>
+						
+						<button class="accordion">Organizational profile</button>
+						<div class="panel">
+							<div class="tab-survey">
+								<button class="tablinksurvey" onclick="openSurvey(event, 'G145')">Sector</button>
+								<button class="tablinksurvey" onclick="openSurvey(event, 'G146')">Territorial Scope</button>
+								<!-- <button class="tablinksurvey" onclick="openSurvey(event, 'G147')">Regional location</button> -->
+								<button class="tablinksurvey" onclick="openSurvey(event, 'G148')">Strategic Focus</button>
+								<!-- <button class="tablinksurvey" onclick="openSurvey(event, 'G149')">Types of Service Provision</button> -->
+							</div>
+						</div>
+	
+						<button class="accordion">Women in migration</button>
+						<div class="panel">
+							<div class="tab-survey">
+								<button class="tablinksurvey" onclick="openSurvey(event, 'G150')">Place in the Migration Cycle</button>
+								<button class="tablinksurvey" onclick="openSurvey(event, 'G151')">Migration Status</button>
+								<button class="tablinksurvey" onclick="openSurvey(event, 'G152')">Survivors of Violence</button>
+								<button class="tablinksurvey" onclick="openSurvey(event, 'G153')">Workers According to Sector</button>
+							</div>
+						</div>
+	
+						<button class="accordion">Priorities of women in migration</button>
+						<div class="panel">
+							<div class="tab-survey">
+								<button class="tablinksurvey" onclick="openSurvey(event, 'G154')">Short Term Priorities</button>
+								<button class="tablinksurvey" onclick="openSurvey(event, 'G155')">Long Term Priorities</button>
+							</div>
+						</div>
+	
+						<div class="tab-survey single">
+							<button class="tablinksurvey" onclick="openSurvey(event, 'G156')">Impact of COVID 19 in the Lives of Migrant Women</button>
+						</div>
+					</div>
+	
+				</div>
+			</div>
+			<div id="G0" class="tabcontentsurvey" style="display: block;">
+				<div class="info-about container">
+					<h2 class="section-name padd-text txtRight">Interactive Data<br/>Visualization</h2>
+					<p class="padd-text txtRight">These interactive graphics are based on a survey carried out during 2020 to more than 300 organizations working on gender and migration around the world.</p>
+					<p class="padd-text txtRight">You can learn more about the profile of organizations working on gender and migration in different regions and sub-regions around the world and the profile of women in migration they work with and their priorities.</p>	
+					<img src="img/exploreData.svg" alt="Explore Data" ondragstart="return false;"/>
+				</div>
+			</div>
+			<!-- global -->
+			<div id="G1" class="tabcontentsurvey">
+				<div class="container">
+					<h3 class="txtRight">Sector <span>| Organizational Profile</span></h3>
+					<h4 class="txtRight">Global</h4>
+					<img class="graphic" src="img/graphics/global/global-sector.png" alt="global-sector" ondragstart="return false;"/>
+				</div>
+			</div>
+			<div id="G2" class="tabcontentsurvey">
+				<div class="container">
+					<h3 class="txtRight">Territorial Scope <span>| Organizational Profile</span></h3>
+					<h4 class="txtRight">Global</h4>
+					<img class="graphic" src="img/graphics/global/global-territorial-scope.png" alt="global-territorial-scope" ondragstart="return false;"/>
+				</div>
+			</div>
+			<!-- <div id="G3" class="tabcontentsurvey flex flexAligner flexCenter">graphic  3</div> -->
+			<div id="G4" class="tabcontentsurvey">
+				<div class="container">
+					<h3 class="txtRight">Strategic Focus <span>| Organizational Profile</span></h3>
+					<h4 class="txtRight">Global</h4>
+					<img class="graphic" src="img/graphics/global/global-strategic-focus.png" alt="global-strategic-focus" ondragstart="return false;"/>
+				</div>
+			</div>
+			<div id="G5" class="tabcontentsurvey">
+				<div class="container">
+					<h3 class="txtRight">Types of Service Provision <span>| Organizational Profile</span></h3>
+					<h4 class="txtRight">Global</h4>
+					<img class="graphic" src="img/graphics/global/global-types-of-service-provision.png" alt="global-types-of-service-provision" ondragstart="return false;"/>
+				</div>				
+			</div>
+			<div id="G6" class="tabcontentsurvey">
+				<div class="container">
+					<h3 class="txtRight">Place in the Migration Cycle <span>| Women in Migration</span></h3>
+					<h4 class="txtRight">Global</h4>
+					<img class="graphic" src="img/graphics/global/global-place-in-the-migration-cycle.png" alt="global-place-in-the-migration-cycle" ondragstart="return false;"/>
+				</div>
+			</div>
+			<div id="G7" class="tabcontentsurvey">
+				<div class="container">
+					<h3 class="txtRight">Migration Status <span>| Women in Migration</span></h3>
+					<h4 class="txtRight">Global</h4>
+					<img class="graphic" src="img/graphics/global/global-migration-status.png" alt="global-migration-status" ondragstart="return false;">
+				</div>
+			</div>
+			<div id="G8" class="tabcontentsurvey">
+				<div class="container">
+					<h3 class="txtRight">Survivors of Violence <span>| Women in Migration</span></h3>
+					<h4 class="txtRight">Global</h4>
+					<img class="graphic" src="img/graphics/global/global-survivors-of-violence.png" alt="global-survivors-of-violence" ondragstart="return false;"/>
+				</div>
+			</div>
+			<div id="G9" class="tabcontentsurvey">
+				<div class="container">
+					<h3 class="txtRight">Workers Acording to Sector <span>| Women in Migration</span></h3>
+					<h4 class="txtRight">Global</h4>
+					<img class="graphic" src="img/graphics/global/global-woman-migrant-workers-acording-to-sector.png" alt="global-migration-status" ondragstart="return false;">
+				</div>
+			</div>
+			<div id="G10" class="tabcontentsurvey">
+				<div class="container">
+					<h3 class="txtRight">Short Term <span>| Priorities of Women in Migration</span></h3>
+					<h4 class="txtRight">Global</h4>
+					<img class="graphic" src="img/graphics/global/global-short-term.png" alt="global-short-term.png" ondragstart="return false;">
+				</div>
+			</div>
+			<div id="G11" class="tabcontentsurvey">
+				<div class="container">
+					<h3 class="txtRight">Long Term <span>| Priorities of Women in Migration</span></h3>
+					<h4 class="txtRight">Global</h4>
+					<img class="graphic" src="img/graphics/global/global-long-term.png" alt="global-long-term" ondragstart="return false;"/>
+				</div>
+			</div>
+			<div id="G12" class="tabcontentsurvey">
+				<div class="container">
+					<h3 class="txtRight">Impact of Covid19</h3>
+					<h4 class="txtRight">Global</h4>
+					<img class="graphic" src="img/graphics/global/global-impact-of-covid.png" alt="global-impact-of-covid" ondragstart="return false;">
+				</div>
+			</div>
+
+			<!-- regional Asia -->
+			<div id="G13" class="tabcontentsurvey">
+				<div class="container">
+					<h3 class="txtRight">Sector <span>| Organizational Profile</span></h3>
+					<h4 class="txtRight">Asia/Pacific</h4>
+					<img class="graphic" src="img/graphics/regional/asia/asia-sector.png" alt="asia-sector" ondragstart="return false;"/>
+				</div>
+			</div>
+			<div id="G14" class="tabcontentsurvey">
+				<div class="container">
+					<h3 class="txtRight">Territorial Scope <span>| Organizational Profile</span></h3>
+					<h4 class="txtRight">Asia/Pacific</h4>
+					<img class="graphic" src="img/graphics/regional/asia/asia-territorial-scope.png" alt="asia-territorial-scope" ondragstart="return false;"/>
+				</div>
+			</div>
+			<!-- <div id="G15" class="tabcontentsurvey flex flexAligner flexCenter">graphic  15</div> -->
+			<div id="G16" class="tabcontentsurvey">
+				<div class="container">
+					<h3 class="txtRight">Strategic Focus <span>| Organizational Profile</span></h3>
+					<h4 class="txtRight">Asia/Pacific</h4>
+					<img class="graphic" src="img/graphics/regional/asia/asia-strategic-focus.png" alt="asia-strategic-focus" ondragstart="return false;"/>
+				</div>
+			</div>
+			<div id="G17" class="tabcontentsurvey">
+				<div class="container">
+					<h3 class="txtRight">Types of Service Provision <span>| Organizational Profile</span></h3>
+					<h4 class="txtRight">Asia/Pacific</h4>
+					<img class="graphic" src="img/graphics/regional/asia/asia-types-of-service-provision.png" alt="asia-types-of-service-provision" ondragstart="return false;"/>
+				</div>
+			</div>
+			<div id="G18" class="tabcontentsurvey">
+				<div class="container">
+					<h3 class="txtRight">Place in the Migration Cycle <span>| Women in Migration</span></h3>
+					<h4 class="txtRight">Asia/Pacific</h4>
+					<img class="graphic" src="img/graphics/regional/asia/asia-place-in-the-migration-cycle.png" alt="asia-place-in-the-migration-cycle" ondragstart="return false;"/>
+				</div>
+			</div>
+			<div id="G19" class="tabcontentsurvey">
+				<div class="container">
+					<h3 class="txtRight">Migration Status <span>| Women in Migration</span></h3>
+					<h4 class="txtRight">Asia/Pacific</h4>
+					<img class="graphic" src="img/graphics/regional/asia/asia-migration-status.png" alt="asia-migration-status" ondragstart="return false;">
+				</div>
+			</div>
+			<div id="G20" class="tabcontentsurvey">
+				<div class="container">
+					<h3 class="txtRight">Survivors of Violence <span>| Women in Migration</span></h3>
+					<h4 class="txtRight">Asia/Pacific</h4>
+					<img class="graphic" src="img/graphics/regional/asia/asia-survivors-of-violence.png" alt="asia-survivors-of-violence" ondragstart="return false;"/>
+				</div>
+			</div>
+			<div id="G21" class="tabcontentsurvey">
+				<div class="container">
+					<h3 class="txtRight">Workers Acording to Sector <span>| Women in Migration</span></h3>
+					<h4 class="txtRight">Asia/Pacific</h4>
+					<img class="graphic" src="img/graphics/regional/asia/asia-woman-migrant-workers-acording-to-sector.png" alt="asia-migration-status" ondragstart="return false;">
+				</div>
+			</div>
+			<div id="G22" class="tabcontentsurvey">
+				<div class="container">
+					<h3 class="txtRight">Short Term <span>| Priorities of Women in Migration</span></h3>
+					<h4 class="txtRight">Asia/Pacific</h4>
+					<img class="graphic" src="img/graphics/regional/asia/asia-short-term.png" alt="asia-short-term.png" ondragstart="return false;">
+				</div>
+			</div>
+			<div id="G23" class="tabcontentsurvey">
+				<div class="container">
+					<h3 class="txtRight">Long Term <span>| Priorities of Women in Migration</span></h3>
+					<h4 class="txtRight">Asia/Pacific</h4>
+					<img class="graphic" src="img/graphics/regional/asia/asia-long-term.png" alt="asia-long-term" ondragstart="return false;"/>
+				</div>
+			</div>
+			<div id="G24" class="tabcontentsurvey">
+				<div class="container">
+					<h3 class="txtRight">Impact of Covid19</h3>
+					<h4 class="txtRight">Asia/Pacific</h4>
+					<img class="graphic" src="img/graphics/regional/asia/asia-impact-of-covid.png" alt="asia-impact-of-covid" ondragstart="return false;">
+				</div>
+			</div>
+			
+			<!-- regional Africa -->
+			<div id="G25" class="tabcontentsurvey">
+				<div class="container">
+					<h3 class="txtRight">Sector <span>| Organizational Profile</span></h3>
+					<h4 class="txtRight">Africa/Middle East</h4>
+					<img class="graphic" src="img/graphics/regional/africa/africa-sector.png" alt="africa-sector" ondragstart="return false;"/>
+				</div>
+			</div>
+			<div id="G26" class="tabcontentsurvey">
+				<div class="container">
+					<h3 class="txtRight">Territorial Scope <span>| Organizational Profile</span></h3>
+					<h4 class="txtRight">Africa/Middle East</h4>
+					<img class="graphic" src="img/graphics/regional/africa/africa-territorial-scope.png" alt="africa-territorial-scope" ondragstart="return false;"/>
+				</div>
+			</div>
+			<!-- <div id="G27" class="tabcontentsurvey flex flexAligner flexCenter">graphic  27</div> -->
+			<div id="G28" class="tabcontentsurvey">
+				<div class="container">
+					<h3 class="txtRight">Strategic Focus <span>| Organizational Profile</span></h3>
+					<h4 class="txtRight">Africa/Middle East</h4>
+				</div>
+				<img class="graphic" src="img/graphics/regional/africa/africa-strategic-focus.png" alt="africa-strategic-focus" ondragstart="return false;"/>
+			</div>
+			<div id="G29" class="tabcontentsurvey">
+				<div class="container">
+					<h3 class="txtRight">Types of Service Provision <span>| Organizational Profile</span></h3>
+					<h4 class="txtRight">Africa/Middle East</h4>
+				</div>
+				<img class="graphic" src="img/graphics/regional/africa/africa-types-of-service-provision.png" alt="africa-types-of-service-provision" ondragstart="return false;"/>
+			</div>
+			<div id="G30" class="tabcontentsurvey">
+				<div class="container">
+					<h3 class="txtRight">Place in the Migration Cycle <span>| Women in Migration</span></h3>
+					<h4 class="txtRight">Africa/Middle East</h4>
+					<img class="graphic" src="img/graphics/regional/africa/africa-place-in-the-migration-cycle.png" alt="africa-place-in-the-migration-cycle" ondragstart="return false;"/>
+				</div>
+			</div>
+			<div id="G31" class="tabcontentsurvey">
+				<div class="container">
+					<h3 class="txtRight">Migration Status <span>| Women in Migration</span></h3>
+					<h4 class="txtRight">Africa/Middle East</h4>
+					<img class="graphic" src="img/graphics/regional/africa/africa-migration-status.png" alt="africa-migration-status" ondragstart="return false;">
+				</div>
+			</div>
+			<div id="G32" class="tabcontentsurvey">
+				<div class="container">
+					<h3 class="txtRight">Survivors of Violence <span>| Women in Migration</span></h3>
+					<h4 class="txtRight">Africa/Middle East</h4>
+					<img class="graphic" src="img/graphics/regional/africa/africa-survivors-of-violence.png" alt="africa-survivors-of-violence" ondragstart="return false;"/>
+				</div>
+			</div>
+			<div id="G33" class="tabcontentsurvey">
+				<div class="container">
+					<h3 class="txtRight">Workers Acording to Sector <span>| Women in Migration</span></h3>
+					<h4 class="txtRight">Africa/Middle East</h4>
+					<img class="graphic" src="img/graphics/regional/africa/africa-woman-migrant-workers-acording-to-sector.png" alt="africa-migration-status" ondragstart="return false;">
+				</div>
+			</div>
+			<div id="G34" class="tabcontentsurvey">
+				<div class="container">
+					<h3 class="txtRight">Short Term <span>| Priorities of Women in Migration</span></h3>
+					<h4 class="txtRight">Africa/Middle East</h4>
+					<img class="graphic" src="img/graphics/regional/africa/africa-short-term.png" alt="africa-short-term.png" ondragstart="return false;">
+				</div>
+			</div>
+			<div id="G35" class="tabcontentsurvey">
+				<div class="container">
+					<h3 class="txtRight">Long Term <span>| Priorities of Women in Migration</span></h3>
+					<h4 class="txtRight">Africa/Middle East</h4>
+					<img class="graphic" src="img/graphics/regional/africa/africa-long-term.png" alt="africa-long-term" ondragstart="return false;"/>
+				</div>
+			</div>
+			<div id="G36" class="tabcontentsurvey">
+				<div class="container">
+					<h3 class="txtRight">Impact of Covid19</h3>
+					<h4 class="txtRight">Africa/Middle East</h4>
+					<img class="graphic" src="img/graphics/regional/africa/africa-impact-of-covid.png" alt="africa-impact-of-covid" ondragstart="return false;">
+				</div>
+			</div>
+
+			<!-- regional Americas -->
+			<div id="G37" class="tabcontentsurvey">
+				<div class="container">
+					<h3 class="txtRight">Sector <span>| Organizational Profile</span></h3>
+					<h4 class="txtRight">Americas</h4>
+					<img class="graphic" src="img/graphics/regional/america/america-sector.png" alt="america-sector" ondragstart="return false;"/>
+				</div>
+			</div>
+			<div id="G38" class="tabcontentsurvey">
+				<div class="container">
+					<h3 class="txtRight">Territorial Scope <span>| Organizational Profile</span></h3>
+					<h4 class="txtRight">Americas</h4>
+					<img class="graphic" src="img/graphics/regional/america/america-territorial-scope.png" alt="america-territorial-scope" ondragstart="return false;"/>
+				</div>
+			</div>
+			<!-- <div id="G39" class="tabcontentsurvey flex flexAligner flexCenter">graphic  39</div> -->
+			<div id="G40" class="tabcontentsurvey">
+				<div class="container">
+					<h3 class="txtRight">Strategic Focus <span>| Organizational Profile</span></h3>
+					<h4 class="txtRight">Americas</h4>
+					<img class="graphic" src="img/graphics/regional/america/america-strategic-focus.png" alt="america-strategic-focus" ondragstart="return false;"/>
+				</div>
+			</div>
+			<div id="G41" class="tabcontentsurvey">
+				<div class="container">
+					<h3 class="txtRight">Types of Service Provision <span>| Organizational Profile</span></h3>
+					<h4 class="txtRight">Americas</h4>
+					<img class="graphic" src="img/graphics/regional/america/america-types-of-service-provision.png" alt="america-types-of-service-provision" ondragstart="return false;"/>
+				</div>
+			</div>
+			<div id="G42" class="tabcontentsurvey">
+				<div class="container">
+					<h3 class="txtRight">Place in the Migration Cycle <span>| Women in Migration</span></h3>
+					<h4 class="txtRight">Americas</h4>
+					<img class="graphic" src="img/graphics/regional/america/america-place-in-the-migration-cycle.png" alt="america-place-in-the-migration-cycle" ondragstart="return false;"/>
+				</div>
+			</div>
+			<div id="G43" class="tabcontentsurvey">
+				<div class="container">
+					<h3 class="txtRight">Migration Status <span>| Women in Migration</span></h3>
+					<h4 class="txtRight">Americas</h4>
+					<img class="graphic" src="img/graphics/regional/america/america-migration-status.png" alt="america-migration-status" ondragstart="return false;">
+				</div>
+			</div>
+			<div id="G44" class="tabcontentsurvey">
+				<div class="container">
+					<h3 class="txtRight">Survivors of Violence <span>| Women in Migration</span></h3>
+					<h4 class="txtRight">Americas</h4>
+					<img class="graphic" src="img/graphics/regional/america/america-survivors-of-violence.png" alt="america-survivors-of-violence" ondragstart="return false;"/>
+				</div>
+			</div>
+			<div id="G45" class="tabcontentsurvey">
+				<div class="container">
+					<h3 class="txtRight">Workers Acording to Sector <span>| Women in Migration</span></h3>
+					<h4 class="txtRight">Americas</h4>
+					<img class="graphic" src="img/graphics/regional/america/america-woman-migrant-workers-acording-to-sector.png" alt="america-migration-status" ondragstart="return false;">
+				</div>
+			</div>
+			<div id="G46" class="tabcontentsurvey">
+				<div class="container">
+					<h3 class="txtRight">Short Term <span>| Priorities of Women in Migration</span></h3>
+					<h4 class="txtRight">Americas</h4>
+					<img class="graphic" src="img/graphics/regional/america/america-short-term.png" alt="america-short-term.png" ondragstart="return false;">
+				</div>
+			</div>
+			<div id="G47" class="tabcontentsurvey">
+				<div class="container">
+					<h3 class="txtRight">Long Term <span>| Priorities of Women in Migration</span></h3>
+					<h4 class="txtRight">Americas</h4>
+					<img class="graphic" src="img/graphics/regional/america/america-long-term.png" alt="america-long-term" ondragstart="return false;"/>
+				</div>
+			</div>
+			<div id="G48" class="tabcontentsurvey">
+				<div class="container">
+					<h3 class="txtRight">Impact of Covid19</h3>
+					<h4 class="txtRight">Americas</h4>
+					<img class="graphic" src="img/graphics/regional/america/america-impact-of-covid.png" alt="america-impact-of-covid" ondragstart="return false;">
+				</div>
+			</div>
+
+			<!-- regional Europe -->
+			<div id="G49" class="tabcontentsurvey">
+				<div class="container">
+					<h3 class="txtRight">Sector <span>| Organizational Profile</span></h3>
+					<h4 class="txtRight">Europe</h4>
+					<img class="graphic" src="img/graphics/regional/europe/europe-sector.png" alt="europe-sector" ondragstart="return false;"/>
+				</div>
+			</div>
+			<div id="G50" class="tabcontentsurvey">
+				<div class="container">
+					<h3 class="txtRight">Territorial Scope <span>| Organizational Profile</span></h3>
+					<h4 class="txtRight">Europe</h4>
+					<img class="graphic" src="img/graphics/regional/europe/europe-territorial-scope.png" alt="europe-territorial-scope" ondragstart="return false;"/>
+				</div>
+			</div>
+			<!-- <div id="G51" class="tabcontentsurvey flex flexAligner flexCenter">graphic  51</div> -->
+			<div id="G52" class="tabcontentsurvey">
+				<div class="container">
+					<h3 class="txtRight">Strategic Focus <span>| Organizational Profile</span></h3>
+					<h4 class="txtRight">Europe</h4>
+					<img class="graphic" src="img/graphics/regional/europe/europe-strategic-focus.png" alt="europe-strategic-focus" ondragstart="return false;"/>
+				</div>
+			</div>
+			<div id="G53" class="tabcontentsurvey">
+				<div class="container">
+					<h3 class="txtRight">Types of Service Provision <span>| Organizational Profile</span></h3>
+					<h4 class="txtRight">Europe</h4>
+					<img class="graphic" src="img/graphics/regional/europe/europe-types-of-service-provision.png" alt="europe-types-of-service-provision" ondragstart="return false;"/>
+				</div>
+			</div>
+			<div id="G54" class="tabcontentsurvey flex flexAligner flexCenter">
+				<div class="container">
+					<h3 class="txtRight">Place in the Migration Cycle <span>| Women in Migration</span></h3>
+					<h4 class="txtRight">Europe</h4>
+					<img class="graphic" src="img/graphics/regional/europe/europe-place-in-the-migration-cycle.png" alt="europe-place-in-the-migration-cycle" ondragstart="return false;"/>
+				</div>
+			</div>
+			<div id="G55" class="tabcontentsurvey">
+				<div class="container">
+					<h3 class="txtRight">Migration Status <span>| Women in Migration</span></h3>
+					<h4 class="txtRight">Europe</h4>
+					<img class="graphic" src="img/graphics/regional/europe/europe-migration-status.png" alt="europe-migration-status" ondragstart="return false;">
+				</div>
+			</div>
+			<div id="G56" class="tabcontentsurvey">
+				<div class="container">
+					<h3 class="txtRight">Survivors of Violence <span>| Women in Migration</span></h3>
+					<h4 class="txtRight">Europe</h4>
+					<img class="graphic" src="img/graphics/regional/europe/europe-survivors-of-violence.png" alt="europe-survivors-of-violence" ondragstart="return false;"/>
+				</div>
+			</div>
+			<div id="G57" class="tabcontentsurvey">
+				<div class="container">
+					<h3 class="txtRight">Workers Acording to Sector <span>| Women in Migration</span></h3>
+					<h4 class="txtRight">Europe</h4>
+					<img class="graphic" src="img/graphics/regional/europe/europe-woman-migrant-workers-acording-to-sector.png" alt="europe-migration-status" ondragstart="return false;">
+				</div>
+			</div>
+			<div id="G58" class="tabcontentsurvey">
+				<div class="container">
+					<h3 class="txtRight">Short Term <span>| Priorities of Women in Migration</span></h3>
+					<h4 class="txtRight">Europe</h4>
+					<img class="graphic" src="img/graphics/regional/europe/europe-short-term.png" alt="europe-short-term.png" ondragstart="return false;">
+				</div>
+			</div>
+			<div id="G59" class="tabcontentsurvey">
+				<div class="container">
+					<h3 class="txtRight">Long Term <span>| Priorities of Women in Migration</span></h3>
+					<h4 class="txtRight">Europe</h4>
+					<img class="graphic" src="img/graphics/regional/europe/europe-long-term.png" alt="europe-long-term" ondragstart="return false;"/>
+				</div>
+			</div>
+			<div id="G60" class="tabcontentsurvey">
+				<div class="container">
+					<h3 class="txtRight">Impact of Covid19</h3>
+					<h4 class="txtRight">Europe</h4>
+					<img class="graphic" src="img/graphics/regional/europe/europe-impact-of-covid.png" alt="europe-impact-of-covid" ondragstart="return false;">
+				</div>
+			</div>
+
+			<!-- section EastSouthEastAsia -->
+			<div id="G61" class="tabcontentsurvey">
+				<div class="container">
+					<h3 class="txtRight">Sector <span>| Organizational Profile</span></h3>
+					<h4 class="txtRight">East and Southeast Asia</h4>
+					<img class="graphic" src="img/graphics/subregional/asia/east-and-southeast/east-and-southeast-sector.png" alt="east-and-southeast-sector" ondragstart="return false;"/>
+				</div>
+			</div>
+			<div id="G62" class="tabcontentsurvey">
+				<div class="container">
+					<h3 class="txtRight">Territorial Scope <span>| Organizational Profile</span></h3>
+					<h4 class="txtRight">East and Southeast Asia</h4>
+					<img class="graphic" src="img/graphics/subregional/asia/east-and-southeast/east-and-southeast-territorial-scope.png" alt="east-and-southeast-territorial-scope" ondragstart="return false;"/>
+				</div>
+			</div>
+			<!-- <div id="G63" class="tabcontentsurvey flex flexAligner flexCenter">graphic  63</div> -->
+			<div id="G64" class="tabcontentsurvey">
+				<div class="container">
+					<h3 class="txtRight">Strategic Focus <span>| Organizational Profile</span></h3>
+					<h4 class="txtRight">East and Southeast Asia</h4>
+					<img class="graphic" src="img/graphics/subregional/asia/east-and-southeast/east-and-southeast-strategic-focus.png" alt="east-and-southeast-strategic-focus" ondragstart="return false;"/>
+				</div>
+			</div>
+			<div id="G65" class="tabcontentsurvey">
+				<div class="container">
+					<h3 class="txtRight">Types of Service Provision <span>| Organizational Profile</span></h3>
+					<h4 class="txtRight">East and Southeast Asia</h4>
+					<img class="graphic" src="img/graphics/subregional/asia/east-and-southeast/east-and-southeast-types-of-service-provision.png" alt="east-and-southeast-types-of-service-provision" ondragstart="return false;"/>
+				</div>
+			</div>
+			<div id="G66" class="tabcontentsurvey">
+				<div class="container">
+					<h3 class="txtRight">Place in the Migration Cycle <span>| Women in Migration</span></h3>
+					<h4 class="txtRight">East and Southeast Asia</h4>
+					<img class="graphic" src="img/graphics/subregional/asia/east-and-southeast/east-and-southeast-place-in-the-migration-cycle.png" alt="east-and-southeast-place-in-the-migration-cycle" ondragstart="return false;"/>
+				</div>
+			</div>
+			<div id="G67" class="tabcontentsurvey">
+				<div class="container">
+					<h3 class="txtRight">Migration Status <span>| Women in Migration</span></h3>
+					<h4 class="txtRight">East and Southeast Asia</h4>
+					<img class="graphic" src="img/graphics/subregional/asia/east-and-southeast/east-and-southeast-migration-status.png" alt="east-and-southeast-migration-status" ondragstart="return false;">
+				</div>
+			</div>
+			<div id="G68" class="tabcontentsurvey">
+				<div class="container">
+					<h3 class="txtRight">Survivors of Violence <span>| Women in Migration</span></h3>
+					<h4 class="txtRight">East and Southeast Asia</h4>
+					<img class="graphic" src="img/graphics/subregional/asia/east-and-southeast/east-and-southeast-survivors-of-violence.png" alt="east-and-southeast-survivors-of-violence" ondragstart="return false;"/>
+				</div>
+			</div>
+			<div id="G69" class="tabcontentsurvey">
+				<div class="container">
+					<h3 class="txtRight">Workers Acording to Sector <span>| Women in Migration</span></h3>
+					<h4 class="txtRight">East and Southeast Asia</h4>
+					<img class="graphic" src="img/graphics/subregional/asia/east-and-southeast/east-and-southeast-woman-migrant-workers-acording-to-sector.png" alt="east-and-southeast-migration-status" ondragstart="return false;">
+				</div>
+			</div>
+			<div id="G70" class="tabcontentsurvey">
+				<div class="container">
+					<h3 class="txtRight">Short Term <span>| Priorities of Women in Migration</span></h3>
+					<h4 class="txtRight">East and Southeast Asia</h4>
+					<img class="graphic" src="img/graphics/subregional/asia/east-and-southeast/east-and-southeast-short-term.png" alt="east-and-southeast-short-term.png" ondragstart="return false;">
+				</div>
+			</div>
+			<div id="G71" class="tabcontentsurvey">
+				<div class="container">
+					<h3 class="txtRight">Long Term <span>| Priorities of Women in Migration</span></h3>
+					<h4 class="txtRight">East and Southeast Asia</h4>
+					<img class="graphic" src="img/graphics/subregional/asia/east-and-southeast/east-and-southeast-long-term.png" alt="east-and-southeast-long-term" ondragstart="return false;"/>
+				</div>
+			</div>
+			<div id="G72" class="tabcontentsurvey">
+				<div class="container">
+					<h3 class="txtRight">Impact of Covid19</h3>
+					<h4 class="txtRight">East and Southeast Asia</h4>
+					<img class="graphic" src="img/graphics/subregional/asia/east-and-southeast/east-and-southeast-impact-of-covid.png" alt="east-and-southeast-impact-of-covid" ondragstart="return false;">
+				</div>
+			</div>
+
+			<!-- section SouthAsia -->
+			<div id="G73" class="tabcontentsurvey">
+				<div class="container">
+					<h3 class="txtRight">Sector <span>| Organizational Profile</span></h3>
+					<h4 class="txtRight">South Asia</h4>
+					<img class="graphic" src="img/graphics/subregional/asia/south-and-central/south-and-central-sector.png" alt="south-and-central-sector" ondragstart="return false;"/>
+				</div>
+			</div>
+			<div id="G74" class="tabcontentsurvey">
+				<div class="container">
+					<h3 class="txtRight">Territorial Scope <span>| Organizational Profile</span></h3>
+					<h4 class="txtRight">South Asia</h4>
+					<img class="graphic" src="img/graphics/subregional/asia/south-and-central/south-and-central-territorial-scope.png" alt="south-and-central-territorial-scope" ondragstart="return false;"/>
+				</div>
+			</div>
+			<!-- <div id="G75" class="tabcontentsurvey flex flexAligner flexCenter">graphic  75</div> -->
+			<div id="G76" class="tabcontentsurvey">
+				<div class="container">
+					<h3 class="txtRight">Strategic Focus <span>| Organizational Profile</span></h3>
+					<h4 class="txtRight">South Asia</h4>
+					<img class="graphic" src="img/graphics/subregional/asia/south-and-central/south-and-central-strategic-focus.png" alt="south-and-central-strategic-focus" ondragstart="return false;"/>
+				</div>
+			</div>
+			<div id="G77" class="tabcontentsurvey">
+				<div class="container">
+					<h3 class="txtRight">Types of Service Provision <span>| Organizational Profile</span></h3>
+					<h4 class="txtRight">South Asia</h4>
+					<img class="graphic" src="img/graphics/subregional/asia/south-and-central/south-and-central-types-of-service-provision.png" alt="south-and-central-types-of-service-provision" ondragstart="return false;"/>
+				</div>
+			</div>
+			<div id="G78" class="tabcontentsurvey">
+				<div class="container">
+					<h3 class="txtRight">Place in the Migration Cycle <span>| Women in Migration</span></h3>
+					<h4 class="txtRight">South Asia</h4>
+					<img class="graphic" src="img/graphics/subregional/asia/south-and-central/south-and-central-place-in-the-migration-cycle.png" alt="south-and-central-place-in-the-migration-cycle" ondragstart="return false;"/>
+				</div>
+			</div>
+			<div id="G79" class="tabcontentsurvey">
+				<div class="container">
+					<h3 class="txtRight">Migration Status <span>| Women in Migration</span></h3>
+					<h4 class="txtRight">South Asia</h4>
+					<img class="graphic" src="img/graphics/subregional/asia/south-and-central/south-and-central-migration-status.png" alt="south-and-central-migration-status" ondragstart="return false;">
+				</div>
+			</div>
+			<div id="G80" class="tabcontentsurvey">
+				<div class="container">
+					<h3 class="txtRight">Survivors of Violence <span>| Women in Migration</span></h3>
+					<h4 class="txtRight">South Asia</h4>
+					<img class="graphic" src="img/graphics/subregional/asia/south-and-central/south-and-central-survivors-of-violence.png" alt="south-and-central-survivors-of-violence" ondragstart="return false;"/>
+				</div>
+			</div>
+			<div id="G81" class="tabcontentsurvey">
+				<div class="container">
+					<h3 class="txtRight">Workers Acording to Sector <span>| Women in Migration</span></h3>
+					<h4 class="txtRight">South Asia</h4>
+					<img class="graphic" src="img/graphics/subregional/asia/south-and-central/south-and-central-woman-migrant-workers-acording-to-sector.png" alt="south-and-central-migration-status" ondragstart="return false;">
+				</div>
+			</div>
+			<div id="G82" class="tabcontentsurvey">
+				<div class="container">
+					<h3 class="txtRight">Short Term <span>| Priorities of Women in Migration</span></h3>
+					<h4 class="txtRight">South Asia</h4>
+					<img class="graphic" src="img/graphics/subregional/asia/south-and-central/south-and-central-short-term.png" alt="south-and-central-short-term.png" ondragstart="return false;">
+				</div>
+			</div>
+			<div id="G83" class="tabcontentsurvey">
+				<div class="container">
+					<h3 class="txtRight">Long Term <span>| Priorities of Women in Migration</span></h3>
+					<h4 class="txtRight">South Asia</h4>
+					<img class="graphic" src="img/graphics/subregional/asia/south-and-central/south-and-central-long-term.png" alt="south-and-central-long-term" ondragstart="return false;"/>
+				</div>
+			</div>
+			<div id="G84" class="tabcontentsurvey">
+				<div class="container">
+					<h3 class="txtRight">Impact of Covid19</h3>
+					<h4 class="txtRight">South Asia</h4>
+					<img class="graphic" src="img/graphics/subregional/asia/south-and-central/south-and-central-impact-of-covid.png" alt="south-and-central-impact-of-covid" ondragstart="return false;">
+				</div>
+			</div>
+
+			<!-- section pacific -->
+			<div id="G85" class="tabcontentsurvey">
+				<div class="container">
+					<h3 class="txtRight">Sector <span>| Organizational Profile</span></h3>
+					<h4 class="txtRight">Pacific</h4>
+					<img class="graphic" src="img/graphics/subregional/asia/pacific/pacific-sector.png" alt="pacific-sector" ondragstart="return false;"/>
+				</div>
+			</div>
+			<div id="G86" class="tabcontentsurvey">
+				<div class="container">
+					<h3 class="txtRight">Territorial Scope <span>| Organizational Profile</span></h3>
+					<h4 class="txtRight">Pacific</h4>
+					<img class="graphic" src="img/graphics/subregional/asia/pacific/pacific-territorial-scope.png" alt="pacific-territorial-scope" ondragstart="return false;"/>
+				</div>
+			</div>
+			<!-- <div id="G87" class="tabcontentsurvey flex flexAligner flexCenter">graphic  87</div> -->
+			<div id="G88" class="tabcontentsurvey">
+				<div class="container">
+					<h3 class="txtRight">Strategic Focus <span>| Organizational Profile</span></h3>
+					<h4 class="txtRight">Pacific</h4>
+					<img class="graphic" src="img/graphics/subregional/asia/pacific/pacific-strategic-focus.png" alt="pacific-strategic-focus" ondragstart="return false;"/>
+				</div>
+			</div>
+			<div id="G89" class="tabcontentsurvey">
+				<div class="container">
+					<h3 class="txtRight">Types of Service Provision <span>| Organizational Profile</span></h3>
+					<h4 class="txtRight">Pacific</h4>
+					<img class="graphic" src="img/graphics/subregional/asia/pacific/pacific-types-of-service-provision.png" alt="pacific-types-of-service-provision" ondragstart="return false;"/>
+				</div>
+			</div>
+			<div id="G90" class="tabcontentsurvey">
+				<div class="container">
+					<h3 class="txtRight">Place in the Migration Cycle <span>| Women in Migration</span></h3>
+					<h4 class="txtRight">Pacific</h4>
+					<img class="graphic" src="img/graphics/subregional/asia/pacific/pacific-place-in-the-migration-cycle.png" alt="pacific-place-in-the-migration-cycle" ondragstart="return false;"/>
+				</div>
+			</div>
+			<div id="G91" class="tabcontentsurvey">
+				<div class="container">
+					<h3 class="txtRight">Migration Status <span>| Women in Migration</span></h3>
+					<h4 class="txtRight">Pacific</h4>
+					<img class="graphic" src="img/graphics/subregional/asia/pacific/pacific-migration-status.png" alt="pacific-migration-status" ondragstart="return false;">
+				</div>
+			</div>
+			<div id="G92" class="tabcontentsurvey">
+				<div class="container">
+					<h3 class="txtRight">Survivors of Violence <span>| Women in Migration</span></h3>
+					<h4 class="txtRight">Pacific</h4>
+					<img class="graphic" src="img/graphics/subregional/asia/pacific/pacific-survivors-of-violence.png" alt="pacific-survivors-of-violence" ondragstart="return false;"/>
+				</div>
+			</div>
+			<div id="G93" class="tabcontentsurvey">
+				<div class="container">
+					<h3 class="txtRight">Workers Acording to Sector <span>| Women in Migration</span></h3>
+					<h4 class="txtRight">Pacific</h4>
+					<img class="graphic" src="img/graphics/subregional/asia/pacific/pacific-woman-migrant-workers-acording-to-sector.png" alt="pacific-migration-status" ondragstart="return false;">
+				</div>
+			</div>
+			<div id="G94" class="tabcontentsurvey">
+				<div class="container">
+					<h3 class="txtRight">Short Term <span>| Priorities of Women in Migration</span></h3>
+					<h4 class="txtRight">Pacific</h4>
+					<img class="graphic" src="img/graphics/subregional/asia/pacific/pacific-short-term.png" alt="pacific-short-term.png" ondragstart="return false;">
+				</div>
+			</div>
+			<div id="G95" class="tabcontentsurvey">
+				<div class="container">
+					<h3 class="txtRight">Long Term <span>| Priorities of Women in Migration</span></h3>
+					<h4 class="txtRight">Pacific</h4>
+					<img class="graphic" src="img/graphics/subregional/asia/pacific/pacific-long-term.png" alt="pacific-long-term" ondragstart="return false;"/>
+				</div>
+			</div>
+			<div id="G96" class="tabcontentsurvey">
+				<div class="container">
+					<h3 class="txtRight">Impact of Covid19</h3>
+					<h4 class="txtRight">Pacific</h4>
+					<img class="graphic" src="img/graphics/subregional/asia/pacific/pacific-impact-of-covid.png" alt="pacific-impact-of-covid" ondragstart="return false;">
+				</div>
+			</div>
+
+			<!-- section Sub-SaharanAfrica -->
+			<div id="G97" class="tabcontentsurvey">
+				<div class="container">
+					<h3 class="txtRight">Sector <span>| Organizational Profile</span></h3>
+					<h4 class="txtRight">Sub-Saharan</h4>
+					<img class="graphic" src="img/graphics/subregional/africa/africa/africa-sector.png" alt="africa-sector" ondragstart="return false;"/>
+				</div>
+			</div>
+			<div id="G98" class="tabcontentsurvey">
+				<div class="container">
+					<h3 class="txtRight">Territorial Scope <span>| Organizational Profile</span></h3>
+					<h4 class="txtRight">Sub-Saharan</h4>
+					<img class="graphic" src="img/graphics/subregional/africa/africa/africa-territorial-scope.png" alt="africa-territorial-scope" ondragstart="return false;"/>
+				</div>
+			</div>
+			<!-- <div id="G99" class="tabcontentsurvey flex flexAligner flexCenter">graphic  99</div> -->
+			<div id="G100" class="tabcontentsurvey">
+				<div class="container">
+					<h3 class="txtRight">Strategic Focus <span>| Organizational Profile</span></h3>
+					<h4 class="txtRight">Sub-Saharan</h4>
+					<img class="graphic" src="img/graphics/subregional/africa/africa/africa-strategic-focus.png" alt="africa-strategic-focus" ondragstart="return false;"/>
+				</div>
+			</div>
+			<div id="G101" class="tabcontentsurvey">
+				<div class="container">
+					<h3 class="txtRight">Types of Service Provision <span>| Organizational Profile</span></h3>
+					<h4 class="txtRight">Sub-Saharan</h4>
+					<img class="graphic" src="img/graphics/subregional/africa/africa/africa-types-of-service-provision.png" alt="africa-types-of-service-provision" ondragstart="return false;"/>
+				</div>
+			</div>
+			<div id="G102" class="tabcontentsurvey">
+				<div class="container">
+					<h3 class="txtRight">Place in the Migration Cycle <span>| Women in Migration</span></h3>
+					<h4 class="txtRight">Sub-Saharan</h4>
+					<img class="graphic" src="img/graphics/subregional/africa/africa/africa-place-in-the-migration-cycle.png" alt="africa-place-in-the-migration-cycle" ondragstart="return false;"/>
+				</div>
+			</div>
+			<div id="G103" class="tabcontentsurvey">
+				<div class="container">
+					<h3 class="txtRight">Migration Status <span>| Women in Migration</span></h3>
+					<h4 class="txtRight">Sub-Saharan</h4>
+					<img class="graphic" src="img/graphics/subregional/africa/africa/africa-migration-status.png" alt="africa-migration-status" ondragstart="return false;">
+				</div>
+			</div>
+			<div id="G104" class="tabcontentsurvey">
+				<div class="container">
+					<h3 class="txtRight">Survivors of Violence <span>| Women in Migration</span></h3>
+					<h4 class="txtRight">Sub-Saharan</h4>
+					<img class="graphic" src="img/graphics/subregional/africa/africa/africa-survivors-of-violence.png" alt="africa-survivors-of-violence" ondragstart="return false;"/>
+				</div>
+			</div>
+			<div id="G105" class="tabcontentsurvey">
+				<div class="container">
+					<h3 class="txtRight">Workers Acording to Sector <span>| Women in Migration</span></h3>
+					<h4 class="txtRight">Sub-Saharan</h4>
+					<img class="graphic" src="img/graphics/subregional/africa/africa/africa-woman-migrant-workers-acording-to-sector.png" alt="africa-migration-status" ondragstart="return false;">
+				</div>
+			</div>
+			<div id="G106" class="tabcontentsurvey">
+				<div class="container">
+					<h3 class="txtRight">Short Term <span>| Priorities of Women in Migration</span></h3>
+					<h4 class="txtRight">Sub-Saharan</h4>
+					<img class="graphic" src="img/graphics/subregional/africa/africa/africa-short-term.png" alt="africa-short-term.png" ondragstart="return false;">
+				</div>
+			</div>
+			<div id="G107" class="tabcontentsurvey">
+				<div class="container">
+					<h3 class="txtRight">Long Term <span>| Priorities of Women in Migration</span></h3>
+					<h4 class="txtRight">Sub-Saharan</h4>
+					<img class="graphic" src="img/graphics/subregional/africa/africa/africa-long-term.png" alt="africa-long-term" ondragstart="return false;"/>
+				</div>
+			</div>
+			<div id="G108" class="tabcontentsurvey">
+				<div class="container">
+					<h3 class="txtRight">Impact of Covid19</h3>
+					<h4 class="txtRight">Sub-Saharan</h4>
+					<img class="graphic" src="img/graphics/subregional/africa/africa/africa-impact-of-covid.png" alt="africa-impact-of-covid" ondragstart="return false;">
+				</div>
+			</div>
+
+			<!-- section MiddleEast -->
+			<div id="G109" class="tabcontentsurvey">
+				<div class="container">
+					<h3 class="txtRight">Sector <span>| Organizational Profile</span></h3>
+					<h4 class="txtRight">Middle East and North Africa</h4>
+					<img class="graphic" src="img/graphics/subregional/africa/mena/mena-sector.png" alt="mena-sector" ondragstart="return false;"/>
+				</div>
+			</div>
+			<div id="G110" class="tabcontentsurvey">
+				<div class="container">
+					<h3 class="txtRight">Territorial Scope <span>| Organizational Profile</span></h3>
+					<h4 class="txtRight">Middle East and North Africa</h4>
+					<img class="graphic" src="img/graphics/subregional/africa/mena/mena-territorial-scope.png" alt="mena-territorial-scope" ondragstart="return false;"/>
+				</div>
+			</div>
+			<!-- <div id="G111" class="tabcontentsurvey flex flexAligner flexCenter">graphic  111</div> -->
+			<div id="G112" class="tabcontentsurvey">
+				<div class="container">
+					<h3 class="txtRight">Strategic Focus <span>| Organizational Profile</span></h3>
+					<h4 class="txtRight">Middle East and North Africa</h4>
+					<img class="graphic" src="img/graphics/subregional/africa/mena/mena-strategic-focus.png" alt="mena-strategic-focus" ondragstart="return false;"/>
+				</div>
+			</div>
+			<div id="G113" class="tabcontentsurvey">
+				<div class="container">
+					<h3 class="txtRight">Types of Service Provision <span>| Organizational Profile</span></h3>
+					<h4 class="txtRight">Middle East and North Africa</h4>
+					<img class="graphic" src="img/graphics/subregional/africa/mena/mena-types-of-service-provision.png" alt="mena-types-of-service-provision" ondragstart="return false;"/>
+				</div>
+			</div>
+			<div id="G114" class="tabcontentsurvey">
+				<div class="container">
+					<h3 class="txtRight">Place in the Migration Cycle <span>| Women in Migration</span></h3>
+					<h4 class="txtRight">Middle East and North Africa</h4>
+					<img class="graphic" src="img/graphics/subregional/africa/mena/mena-place-in-the-migration-cycle.png" alt="mena-place-in-the-migration-cycle" ondragstart="return false;"/>
+				</div>
+			</div>
+			<div id="G115" class="tabcontentsurvey">
+				<div class="container">
+					<h3 class="txtRight">Migration Status <span>| Women in Migration</span></h3>
+					<h4 class="txtRight">Middle East and North Africa</h4>
+					<img class="graphic" src="img/graphics/subregional/africa/mena/mena-migration-status.png" alt="mena-migration-status" ondragstart="return false;">
+				</div>
+			</div>
+			<div id="G116" class="tabcontentsurvey">
+				<div class="container">
+					<h3 class="txtRight">Survivors of Violence <span>| Women in Migration</span></h3>
+					<h4 class="txtRight">Middle East and North Africa</h4>
+					<img class="graphic" src="img/graphics/subregional/africa/mena/mena-survivors-of-violence.png" alt="mena-survivors-of-violence" ondragstart="return false;"/>
+				</div>
+			</div>
+			<div id="G117" class="tabcontentsurvey">
+				<div class="container">
+					<h3 class="txtRight">Workers Acording to Sector <span>| Women in Migration</span></h3>
+					<h4 class="txtRight">Middle East and North Africa</h4>
+					<img class="graphic" src="img/graphics/subregional/africa/mena/mena-woman-migrant-workers-acording-to-sector.png" alt="mena-migration-status" ondragstart="return false;">
+				</div>
+			</div>
+			<div id="G118" class="tabcontentsurvey">
+				<div class="container">
+					<h3 class="txtRight">Short Term <span>| Priorities of Women in Migration</span></h3>
+					<h4 class="txtRight">Middle East and North Africa</h4>
+					<img class="graphic" src="img/graphics/subregional/africa/mena/mena-short-term.png" alt="mena-short-term.png" ondragstart="return false;">
+				</div>
+			</div>
+			<div id="G119" class="tabcontentsurvey">
+				<div class="container">
+					<h3 class="txtRight">Long Term <span>| Priorities of Women in Migration</span></h3>
+					<h4 class="txtRight">Middle East and North Africa</h4>
+					<img class="graphic" src="img/graphics/subregional/africa/mena/mena-long-term.png" alt="mena-long-term" ondragstart="return false;"/>
+				</div>
+			</div>
+			<div id="G120" class="tabcontentsurvey">
+				<div class="container">
+					<h3 class="txtRight">Impact of Covid19</h3>
+					<h4 class="txtRight">Middle East and North Africa</h4>
+					<img class="graphic" src="img/graphics/subregional/africa/mena/mena-impact-of-covid.png" alt="mena-impact-of-covid" ondragstart="return false;">
+				</div>
+			</div>
+
+			<!-- Section-SouthAmerica -->
+			<div id="G121" class="tabcontentsurvey">
+				<div class="container">
+					<h3 class="txtRight">Sector <span>| Organizational Profile</span></h3>
+					<h4 class="txtRight">South America</h4>
+					<img class="graphic" src="img/graphics/subregional/america/sudamerica/sudamerica-sector.png" alt="mena-sector" ondragstart="return false;"/>
+				</div>
+			</div>
+			<div id="G122" class="tabcontentsurvey">
+				<div class="container">
+					<h3 class="txtRight">Territorial Scope <span>| Organizational Profile</span></h3>
+					<h4 class="txtRight">South America</h4>
+					<img class="graphic" src="img/graphics/subregional/america/sudamerica/sudamerica-territorial-scope.png" alt="mena-territorial-scope" ondragstart="return false;"/>
+				</div>
+			</div>
+			<!-- <div id="G123" class="tabcontentsurvey flex flexAligner flexCenter">graphic  123</div> -->
+			<div id="G124" class="tabcontentsurvey">
+				<div class="container">
+					<h3 class="txtRight">Strategic Focus <span>| Organizational Profile</span></h3>
+					<h4 class="txtRight">South America</h4>
+					<img class="graphic" src="img/graphics/subregional/america/sudamerica/sudamerica-strategic-focus.png" alt="mena-strategic-focus" ondragstart="return false;"/>
+				</div>
+			</div>
+			<div id="G125" class="tabcontentsurvey">
+				<div class="container">
+					<h3 class="txtRight">Types of Service Provision <span>| Organizational Profile</span></h3>
+					<h4 class="txtRight">South America</h4>
+					<img class="graphic" src="img/graphics/subregional/america/sudamerica/sudamerica-types-of-service-provision.png" alt="mena-types-of-service-provision" ondragstart="return false;"/>
+				</div>
+			</div>
+			<div id="G126" class="tabcontentsurvey">
+				<div class="container">
+					<h3 class="txtRight">Place in the Migration Cycle <span>| Women in Migration</span></h3>
+					<h4 class="txtRight">South America</h4>
+					<img class="graphic" src="img/graphics/subregional/america/sudamerica/sudamerica-place-in-the-migration-cycle.png" alt="mena-place-in-the-migration-cycle" ondragstart="return false;"/>
+				</div>
+			</div>
+			<div id="G127" class="tabcontentsurvey">
+				<div class="container">
+					<h3 class="txtRight">Migration Status <span>| Women in Migration</span></h3>
+					<h4 class="txtRight">South America</h4>
+					<img class="graphic" src="img/graphics/subregional/america/sudamerica/sudamerica-migration-status.png" alt="mena-migration-status" ondragstart="return false;">
+				</div>
+			</div>
+			<div id="G128" class="tabcontentsurvey">
+				<div class="container">
+					<h3 class="txtRight">Survivors of Violence <span>| Women in Migration</span></h3>
+					<h4 class="txtRight">South America</h4>
+					<img class="graphic" src="img/graphics/subregional/america/sudamerica/sudamerica-survivors-of-violence.png" alt="mena-survivors-of-violence" ondragstart="return false;"/>
+				</div>
+			</div>
+			<div id="G129" class="tabcontentsurvey">
+				<div class="container">
+					<h3 class="txtRight">Workers Acording to Sector <span>| Women in Migration</span></h3>
+					<h4 class="txtRight">South America</h4>
+					<img class="graphic" src="img/graphics/subregional/america/sudamerica/sudamerica-woman-migrant-workers-acording-to-sector.png" alt="mena-migration-status" ondragstart="return false;">
+				</div>
+			</div>
+			<div id="G130" class="tabcontentsurvey">
+				<div class="container">
+					<h3 class="txtRight">Short Term <span>| Priorities of Women in Migration</span></h3>
+					<h4 class="txtRight">South America</h4>
+					<img class="graphic" src="img/graphics/subregional/america/sudamerica/sudamerica-short-term.png" alt="mena-short-term.png" ondragstart="return false;">
+				</div>
+			</div>
+			<div id="G131" class="tabcontentsurvey">
+				<div class="container">
+					<h3 class="txtRight">Long Term <span>| Priorities of Women in Migration</span></h3>
+					<h4 class="txtRight">South America</h4>
+					<img class="graphic" src="img/graphics/subregional/america/sudamerica/sudamerica-long-term.png" alt="mena-long-term" ondragstart="return false;"/>
+				</div>
+			</div>
+			<div id="G132" class="tabcontentsurvey">
+				<div class="container">
+					<h3 class="txtRight">Impact of Covid19</h3>
+					<h4 class="txtRight">South America</h4>
+					<img class="graphic" src="img/graphics/subregional/america/sudamerica/sudamerica-impact-of-covid.png" alt="mena-impact-of-covid" ondragstart="return false;">
+				</div>
+			</div>
+
+			<!-- Section-CentralNorthAmerica -->
+			<div id="G133" class="tabcontentsurvey">
+				<div class="container">
+					<h3 class="txtRight">Sector <span>| Organizational Profile</span></h3>
+					<h4 class="txtRight">Central and North America</h4>
+					<img class="graphic" src="img/graphics/subregional/america/central-and-north/central-and-north-sector.png" alt="central-and-north-sector" ondragstart="return false;"/>
+				</div>
+			</div>
+			<div id="G134" class="tabcontentsurvey">
+				<div class="container">
+					<h3 class="txtRight">Territorial Scope <span>| Organizational Profile</span></h3>
+					<h4 class="txtRight">Central and North America</h4>
+					<img class="graphic" src="img/graphics/subregional/america/central-and-north/central-and-north-territorial-scope.png" alt="central-and-north-territorial-scope" ondragstart="return false;"/>
+				</div>
+			</div>
+			<!-- <div id="G135" class="tabcontentsurvey flex flexAligner flexCenter">graphic  135</div> -->
+			<div id="G136" class="tabcontentsurvey">
+				<div class="container">
+					<h3 class="txtRight">Strategic Focus <span>| Organizational Profile</span></h3>
+					<h4 class="txtRight">Central and North America</h4>
+					<img class="graphic" src="img/graphics/subregional/america/central-and-north/central-and-north-strategic-focus.png" alt="central-and-north-strategic-focus" ondragstart="return false;"/>
+				</div>
+			</div>
+			<div id="G137" class="tabcontentsurvey">
+				<div class="container">
+					<h3 class="txtRight">Types of Service Provision <span>| Organizational Profile</span></h3>
+					<h4 class="txtRight">Central and North America</h4>
+					<img class="graphic" src="img/graphics/subregional/america/central-and-north/central-and-north-types-of-service-provision.png" alt="central-and-north-types-of-service-provision" ondragstart="return false;"/>
+				</div>
+			</div>
+			<div id="G138" class="tabcontentsurvey">
+				<div class="container">
+					<h3 class="txtRight">Place in the Migration Cycle <span>| Women in Migration</span></h3>
+					<h4 class="txtRight">Central and North America</h4>
+					<img class="graphic" src="img/graphics/subregional/america/central-and-north/central-and-north-place-in-the-migration-cycle.png" alt="central-and-north-place-in-the-migration-cycle" ondragstart="return false;"/>
+				</div>
+			</div>
+			<div id="G139" class="tabcontentsurvey">
+				<div class="container">
+					<h3 class="txtRight">Migration Status <span>| Women in Migration</span></h3>
+					<h4 class="txtRight">Central and North America</h4>
+					<img class="graphic" src="img/graphics/subregional/america/central-and-north/central-and-north-migration-status.png" alt="central-and-north-migration-status" ondragstart="return false;">
+				</div>
+			</div>
+			<div id="G140" class="tabcontentsurvey">
+				<div class="container">
+					<h3 class="txtRight">Survivors of Violence <span>| Women in Migration</span></h3>
+					<h4 class="txtRight">Central and North America</h4>
+					<img class="graphic" src="img/graphics/subregional/america/central-and-north/central-and-north-survivors-of-violence.png" alt="central-and-north-survivors-of-violence" ondragstart="return false;"/>
+				</div>
+			</div>
+			<div id="G141" class="tabcontentsurvey">
+				<div class="container">
+					<h3 class="txtRight">Workers Acording to Sector <span>| Women in Migration</span></h3>
+					<h4 class="txtRight">Central and North America</h4>
+					<img class="graphic" src="img/graphics/subregional/america/central-and-north/central-and-north-woman-migrant-workers-acording-to-sector.png" alt="central-and-north-migration-status" ondragstart="return false;">
+				</div>
+			</div>
+			<div id="G142" class="tabcontentsurvey">
+				<div class="container">
+					<h3 class="txtRight">Short Term <span>| Priorities of Women in Migration</span></h3>
+					<h4 class="txtRight">Central and North America</h4>
+					<img class="graphic" src="img/graphics/subregional/america/central-and-north/central-and-north-short-term.png" alt="central-and-north-short-term.png" ondragstart="return false;">
+				</div>
+			</div>
+			<div id="G143" class="tabcontentsurvey">
+				<div class="container">
+					<h3 class="txtRight">Long Term <span>| Priorities of Women in Migration</span></h3>
+					<h4 class="txtRight">Central and North America</h4>
+					<img class="graphic" src="img/graphics/subregional/america/central-and-north/central-and-north-long-term.png" alt="central-and-north-long-term" ondragstart="return false;"/>
+				</div>
+			</div>
+			<div id="G144" class="tabcontentsurvey">
+				<div class="container">
+					<h3 class="txtRight">Impact of Covid19</h3>
+					<h4 class="txtRight">Central and North America</h4>
+					<img class="graphic" src="img/graphics/subregional/america/central-and-north/central-and-north-impact-of-covid.png" alt="central-and-north-impact-of-covid" ondragstart="return false;">
+				</div>
+			</div>
+
+			<!-- Section-TheCaribbean -->
+			<div id="G145" class="tabcontentsurvey">
+				<div class="container">
+					<h3 class="txtRight">Sector <span>| Organizational Profile</span></h3>
+					<h4 class="txtRight">Caribbean</h4>
+					<img class="graphic" src="img/graphics/subregional/america/caribean/caribean-sector.png" alt="caribean-sector" ondragstart="return false;"/>
+				</div>
+			</div>
+			<div id="G146" class="tabcontentsurvey">
+				<div class="container">
+					<h3 class="txtRight">Territorial Scope <span>| Organizational Profile</span></h3>
+					<h4 class="txtRight">Caribbean</h4>
+					<img class="graphic" src="img/graphics/subregional/america/caribean/caribean-territorial-scope.png" alt="caribean-territorial-scope" ondragstart="return false;"/>
+				</div>
+			</div>
+			<!-- <div id="G147" class="tabcontentsurvey flex flexAligner flexCenter">graphic  147</div> -->
+			<div id="G148" class="tabcontentsurvey">
+				<div class="container">
+					<h3 class="txtRight">Strategic Focus <span>| Organizational Profile</span></h3>
+					<h4 class="txtRight">Caribbean</h4>
+					<img class="graphic" src="img/graphics/subregional/america/caribean/caribean-strategic-focus.png" alt="caribean-strategic-focus" ondragstart="return false;"/>
+				</div>
+			</div>
+			<!-- <div id="G149" class="tabcontentsurvey flex flexAligner flexCenter">
+				<img class="graphic" src="img/graphics/subregional/america/caribean/caribean-types-of-service-provision.png" alt="caribean-types-of-service-provision" ondragstart="return false;"/>
+			</div> -->
+			<div id="G150" class="tabcontentsurvey">
+				<div class="container">
+					<h3 class="txtRight">Place in the Migration Cycle <span>| Women in Migration</span></h3>
+					<h4 class="txtRight">Caribbean</h4>
+					<img class="graphic" src="img/graphics/subregional/america/caribean/caribean-place-in-the-migration-cycle.png" alt="caribean-place-in-the-migration-cycle" ondragstart="return false;"/>
+				</div>
+			</div>
+			<div id="G151" class="tabcontentsurvey">
+				<div class="container">
+					<h3 class="txtRight">Migration Status <span>| Women in Migration</span></h3>
+					<h4 class="txtRight">Caribbean</h4>
+					<img class="graphic" src="img/graphics/subregional/america/caribean/caribean-migration-status.png" alt="caribean-migration-status" ondragstart="return false;">
+				</div>
+			</div>
+			<div id="G152" class="tabcontentsurvey">
+				<div class="container">
+					<h3 class="txtRight">Survivors of Violence <span>| Women in Migration</span></h3>
+					<h4 class="txtRight">Caribbean</h4>
+					<img class="graphic" src="img/graphics/subregional/america/caribean/caribean-survivors-of-violence.png" alt="caribean-survivors-of-violence" ondragstart="return false;"/>
+				</div>
+			</div>
+			<div id="G153" class="tabcontentsurvey">
+				<div class="container">
+					<h3 class="txtRight">Workers Acording to Sector <span>| Women in Migration</span></h3>
+					<h4 class="txtRight">Caribbean</h4>
+					<img class="graphic" src="img/graphics/subregional/america/caribean/caribean-woman-migrant-workers-acording-to-sector.png" alt="caribean-migration-status" ondragstart="return false;">
+				</div>
+			</div>
+			<div id="G154" class="tabcontentsurvey">
+				<div class="container">
+					<h3 class="txtRight">Short Term <span>| Priorities of Women in Migration</span></h3>
+					<h4 class="txtRight">Caribbean</h4>
+					<img class="graphic" src="img/graphics/subregional/america/caribean/caribean-short-term.png" alt="caribean-short-term.png" ondragstart="return false;">
+				</div>
+			</div>
+			<div id="G155" class="tabcontentsurvey">
+				<div class="container">
+					<h3 class="txtRight">Long Term <span>| Priorities of Women in Migration</span></h3>
+					<h4 class="txtRight">Caribbean</h4>
+					<img class="graphic" src="img/graphics/subregional/america/caribean/caribean-long-term.png" alt="caribean-long-term" ondragstart="return false;"/>
+				</div>
+			</div>
+			<div id="G156" class="tabcontentsurvey">
+				<div class="container">
+					<h3 class="txtRight">Impact of Covid19</h3>
+					<h4 class="txtRight">Caribbean</h4>
+					<img class="graphic" src="img/graphics/subregional/america/caribean/caribean-impact-of-covid.png" alt="caribean-impact-of-covid" ondragstart="return false;">
+				</div>
+			</div>
+		</section>
+
+		<footer>
+			<div class="container-home">
+				<div class="partners">
+					<p>A publication by</p>
+					<a href="#" target="_blank">
+						<img src="./img/logo-wimn.svg" alt="Women In Migration Network Logotype">
+					</a>
+					<a href="https://www.fes.de/en/displacement-migration-integration" target="_blank">
+						<img src="./img/logo-fes.svg" alt="Friedrich Ebert Stiftung Logotype">
+					</a>
+				</div>
+				<hr>
+				<div class="copy"><p>Copyright © 2022 - All Rights Reserved</p></div>
+				<div class="quintoImpacto"><p>Developed by <a href="http://quintoimpacto.net/" target="_blank" rel="nofollow noreferrer">
+						<img src="./img/quintoImpacto.svg" alt="Quinto Impacto Logotype">
+					</a></p>
+				</div>
+			</div>	
+		</footer>
+		
+		<script src="js/main.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+		<script>
+			// menu
+			var btnMenu = document.getElementById("btnMenu");
+			var mainNav = document.getElementById("main-nav");
+			var filterData = document.getElementById("filterData");
+			var btnExpand = document.getElementById("btnExpand");
+			var interactiveData = document.getElementById("interactiveData");
+
+			function buttonMenu() {
+				btnMenu.classList.toggle("is-active");
+				mainNav.classList.toggle("showMenu");
+			}
+
+			function btnExpandFilter() {
+				filterData.classList.toggle("showFilters");
+				btnExpand.classList.toggle("expand");
+				interactiveData.classList.toggle("showFiltersMenu")
+			}
+
+		</script>
+		<script src="js/miniature.earth.core.js"></script>
+		<script src="js/map.js"></script>
+		<script>
+			$(window).scroll(function(){
+				if ($(this).scrollTop() > 50) {
+				$('#header').addClass('headerBack');
+				} else {
+				$('#header').removeClass('headerBack');
+				}
+			});
+		</script>
+	</body>
+</html>
