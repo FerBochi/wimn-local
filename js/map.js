@@ -12,7 +12,7 @@ window.addEventListener( 'load', function() {
 		light: 'none',
 
 		//mapImage: '/map/img/hologram-map.svg',
-		mapImage: '/wimn/html/img/hologram-map.svg',
+		mapImage: '/img/hologram-map.svg',
 		transparent: true,
 		autoRotate : true,
 		autoRotateSpeed: 1.2,
@@ -46,7 +46,7 @@ window.addEventListener( 'load', function() {
 		for ( var i=0; i < 8; i++ ) {
 			sprites[i] = this.addSprite( {
 				//image: '/map/img/hologram-shine.svg',
-				image: '/wimn/html/img/hologram-shine.svg',
+				image: '/img/hologram-shine.svg',
 				scale: 0.01,
 				offset: -0.5,
 				opacity: 0.5
