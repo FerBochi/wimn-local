@@ -11,7 +11,8 @@ window.addEventListener( 'load', function() {
 		location : { lat: 20, lng : 20 },
 		light: 'none',
 
-		mapImage: '/map/img/hologram-map.svg',
+		//mapImage: '/map/img/hologram-map.svg',
+		mapImage: '/wimn/html/img/hologram-map.svg',
 		transparent: true,
 		autoRotate : true,
 		autoRotateSpeed: 1.2,
@@ -30,7 +31,7 @@ window.addEventListener( 'load', function() {
 			color : '#c7a85c',
 			opacity: 0.7,
 			hairline: true,
-			offset: -0.5
+			offset: -0.1
 		};
 		
 		for ( var i in connections ) {			
@@ -44,7 +45,8 @@ window.addEventListener( 'load', function() {
 		
 		for ( var i=0; i < 8; i++ ) {
 			sprites[i] = this.addSprite( {
-				image: '/map/img/hologram-shine.svg',
+				//image: '/map/img/hologram-shine.svg',
+				image: '/wimn/html/img/hologram-shine.svg',
 				scale: 0.01,
 				offset: -0.5,
 				opacity: 0.5
