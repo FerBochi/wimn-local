@@ -117,20 +117,6 @@
 				</div>
 			</div>
 		</section>
-		
-		<div id="popup" class="" style="display: none;">
-			<div class="content">
-				<h5>DEFINITION</h5>
-				<h2 class="color-brown">Women in migration</h2>
-				<h2 class="color-brown-light">are not only those who are on the move,</h2>
-				<p>
-					but all women who are affected by migration, including those who have been deported or have returned to their countries of origin, and those who have not migrated, even if someone in their family has.
-				</p>
-				<div class="align-right">
-					<span class="btn" onclick="closePop()">Close</span>
-				</div>
-			</div>
-		</div>
 
 		<footer>
 			<div class="container-home">
@@ -172,18 +158,6 @@
 					loadingScreen.classList.add("hiddenPreload");
 				}, 1500)
 			}, 2000);
-
-			function openPop() {
-				popup.classList.add("showPop");
-				setTimeout(function(){
-					popup.classList.add("showContent");
-				},0);
-			}
-
-			function closePop() {
-				popup.classList.remove("showPop");
-				popup.classList.remove("showContent");
-			}
 		</script>
 
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -617,7 +591,6 @@
 		</script>
 
 		<script async="async" defer="defer" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDKm7VJT8c1jfK0uJseFXJnxNZZmMxm4rA&callback=initMap"></script>	
-		<script src="https://unpkg.com/@googlemaps/markerclustererplus/dist/index.min.js"></script>
 
 		<script>
 			$(window).scroll(function(){
