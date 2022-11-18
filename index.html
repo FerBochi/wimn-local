@@ -493,7 +493,7 @@
 
 			function clearMarkers1() {
 				for (var i = 0; i < markers.length; i++) {
-					if(organizations[i].type != "Migrant women's rights"){
+					if(organizations[i].type == null || !organizations[i].type.includes("Migrant women's rights")){
 						markers[i].setVisible(false);
 					} else {
 						markers[i].setVisible(true);	
@@ -502,7 +502,7 @@
 			}
 			function clearMarkers2() {
 				for (var i = 0; i < markers.length; i++) {
-					if(organizations[i].type != "Labor rights"){
+					if(organizations[i].type == null || !organizations[i].type.includes("Labor rights")){
 						markers[i].setVisible(false);
 					} else {
 						markers[i].setVisible(true);	
@@ -511,7 +511,7 @@
 			}
 			function clearMarkers3() {
 				for (var i = 0; i < markers.length; i++) {
-					if(organizations[i].type != "LGBTQ+ rights"){
+					if(organizations[i].type == null || !organizations[i].type.includes("LGBTQ+ rights")){
 						markers[i].setVisible(false);
 					} else {
 						markers[i].setVisible(true);	
@@ -520,7 +520,7 @@
 			}
 			function clearMarkers4() {
 				for (var i = 0; i < markers.length; i++) {
-					if(organizations[i].type != "Black and indigenous rights"){
+					if(organizations[i].type == null || !organizations[i].type.includes("Black and indigenous rights")){
 						markers[i].setVisible(false);
 					} else {
 						markers[i].setVisible(true);	
@@ -529,7 +529,7 @@
 			}
 			function clearMarkers5() {
 				for (var i = 0; i < markers.length; i++) {
-					if(organizations[i].type != "Climate, environment and displacement"){
+					if(organizations[i].type == null || !organizations[i].type.includes("Climate, environment and displacement")){
 						markers[i].setVisible(false);
 					} else {
 						markers[i].setVisible(true);	
@@ -538,7 +538,7 @@
 			}
 			function clearMarkers6() {
 				for (var i = 0; i < markers.length; i++) {
-					if(organizations[i].type != "Migrant woman led organizations"){
+					if(organizations[i].type == null || !organizations[i].type.includes("Migrant woman led organizations")){
 						markers[i].setVisible(false);
 					} else {
 						markers[i].setVisible(true);	
