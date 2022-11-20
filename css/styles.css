@@ -760,7 +760,7 @@ footer hr{
 	}
 }
 
-@media(max-width: 1200px){
+@media(max-width: 1350px){
 	.boteneraMap {
 		justify-content: center;
 		flex-wrap: wrap;
