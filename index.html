@@ -561,7 +561,7 @@
 					type : 'GET',
 					success: function (data){
 						var info = JSON.parse(data);
-						var content = "<br/><span style='text-align=center'><h1><b>" + isEmpty(info.name) + "</b></h1></span><br>" + isEmpty(info.type) + "<br>" + isEmpty(info.description) + "<br/><br>" + isEmpty(info.address) + "<br/>" + addWebsite(info.web) + " " + addEmail(info.email);
+						var content = "<br/><span style='text-align=center'><h1><b>" + isEmpty(info.name) + "</b></h1></span><br>" + isEmpty(info.description) + "<br/><br>" + isEmpty(info.address) + "<br/>" + addWebsite(info.web) + " " + addEmail(info.email) + "<br/>" + addFacebook(info.facebook) + " " + addInstagram(info.instagram) + " " + addTwitter(info.twitter);
 						infowindow.setContent(content);
 					}
 				});
@@ -585,6 +585,27 @@
 					return '';
 				} else {
 					return "<a href='mailto:" + email + "'>Contact by email</a>";
+				}
+			}
+			function addFacebook(facebook){
+				if (facebook == null || facebook == '') {
+					return '';
+				} else {
+					return "<br><a href='https://www.facebook.com/"+facebook+"' target='_blank'>Facebook: " + facebook + "</a>";
+				}
+			}
+			function addInstagram(instagram){
+				if (instagram == null || instagram == '') {
+					return '';
+				} else {
+					return "<br><a href='https://www.instagram.com/"+instagram+"' target='_blank'>Instagram: " + instagram + "</a>";
+				}
+			}
+			function addTwitter(twitter){
+				if (twitter == null || twitter == '') {
+					return '';
+				} else {
+					return "<br><a href='https://twitter.com/"+twitter+"' target='_blank'>Twitter: " + twitter + "</a>";
 				}
 			}
 
