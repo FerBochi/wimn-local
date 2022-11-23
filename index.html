@@ -68,7 +68,7 @@
 			</nav>
 		</header>
 
-		<section class="container-home mt-postHeader">
+		<section class="container-home">
 			<div class="row">
 				<div class="col-12 frase-principal">
 					<h3>Global Mapping of Organizations Working on</h3>
@@ -485,6 +485,13 @@
 									
 						}
 					}
+					new MarkerClusterer(map, markers, {
+						//imagePath: '/map/images/m',
+						imagePath: '/images/m',
+						gridSize:8,
+					});
+					console.log(markers[0]);
+					
 				}, error: function (result){
 						console.log("The api request was not completed");
 					},
@@ -611,14 +618,6 @@
 
 		</script>
 		<script async="async" defer="defer" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDKm7VJT8c1jfK0uJseFXJnxNZZmMxm4rA&callback=initMap"></script>	
-		<script>
-			$(window).scroll(function(){
-				if ($(this).scrollTop() > 50) {
-				$('#header').addClass('headerBack');
-				} else {
-				$('#header').removeClass('headerBack');
-				}
-			});
-		</script>
+		<script src="https://unpkg.com/@googlemaps/markerclustererplus/dist/index.min.js"></script>
 	</body>
 </html>
