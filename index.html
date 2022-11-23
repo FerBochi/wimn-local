@@ -485,12 +485,7 @@
 									
 						}
 					}
-					new MarkerClusterer(map, markers, {
-						//imagePath: '/map/images/m',
-						imagePath: '/images/m',
-						gridSize:8,
-					});
-					console.log(markers[0]);
+					
 					
 				}, error: function (result){
 						console.log("The api request was not completed");
@@ -618,6 +613,6 @@
 
 		</script>
 		<script async="async" defer="defer" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDKm7VJT8c1jfK0uJseFXJnxNZZmMxm4rA&callback=initMap"></script>	
-		<script src="https://unpkg.com/@googlemaps/markerclustererplus/dist/index.min.js"></script>
+	
 	</body>
 </html>
