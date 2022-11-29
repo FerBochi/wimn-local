@@ -485,6 +485,14 @@
 									
 						}
 					}
+					markerCluster = new MarkerClusterer(map, markers, {
+						//imagePath: '/map/images/m',
+						imagePath: '/images/m',
+						gridSize:20,
+					});
+					markerCluster.setIgnoreHidden(true);
+					
+					console.log(markers[0]);
 					
 					
 				}, error: function (result){
@@ -501,6 +509,7 @@
 						markers[i].setVisible(true);	
 					}
 				}
+				markerCluster.repaint();
 			}
 			function clearMarkers2() {
 				for (var i = 0; i < markers.length; i++) {
@@ -510,6 +519,7 @@
 						markers[i].setVisible(true);	
 					}
 				}
+				markerCluster.repaint();
 			}
 			function clearMarkers3() {
 				for (var i = 0; i < markers.length; i++) {
@@ -519,6 +529,7 @@
 						markers[i].setVisible(true);	
 					}
 				}
+				markerCluster.repaint();
 			}
 			function clearMarkers4() {
 				for (var i = 0; i < markers.length; i++) {
@@ -528,6 +539,7 @@
 						markers[i].setVisible(true);	
 					}
 				}
+				markerCluster.repaint();
 			}
 			function clearMarkers5() {
 				for (var i = 0; i < markers.length; i++) {
@@ -537,6 +549,7 @@
 						markers[i].setVisible(true);	
 					}
 				}
+				markerCluster.repaint();
 			}
 			function clearMarkers6() {
 				for (var i = 0; i < markers.length; i++) {
@@ -546,6 +559,7 @@
 						markers[i].setVisible(true);	
 					}
 				}
+				markerCluster.repaint();
 			}
 			function showAllMarkers() {
 				for (var i = 0; i < markers.length; i++) {
@@ -555,6 +569,7 @@
 						markers[i].setVisible(true);
 					}	
 				}
+				markerCluster.repaint();
 			}
 
 			function getOrganizationInfo(id, infowindow){
@@ -613,6 +628,6 @@
 
 		</script>
 		<script async="async" defer="defer" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDKm7VJT8c1jfK0uJseFXJnxNZZmMxm4rA&callback=initMap"></script>	
-	
+		<script src="https://unpkg.com/@googlemaps/markerclustererplus/dist/index.min.js"></script>
 	</body>
 </html>
