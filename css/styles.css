@@ -290,7 +290,7 @@ nav {
 	z-index:10;
 }
 .interactiveMap #map{    
-	height: 785px;
+	height: 500px;
 	border-radius:20px;
 }
 .frase-principal h2, .frase-principal h3, .frase-principal p{
