@@ -488,7 +488,10 @@
 					markerCluster = new MarkerClusterer(map, markers, {
 						//imagePath: '/map/images/m',
 						imagePath: '/images/m',
-						gridSize:20,
+						gridSize:10,
+						maxZoom:10,
+						zoomOnClick: true,
+  						minimumClusterSize: 3,
 					});
 					markerCluster.setIgnoreHidden(true);
 					
